@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 409 522.6" enable-background="new 0 0 409 522.6" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="4.4" y="3.4" width="400.3" height="518.7"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<defs>
+			<rect id="SVGID_3_" x="4.4" y="3.4" width="400.3" height="518.7"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  overflow="visible"/>
+		</clipPath>
+		<g opacity="8.999630e-02" clip-path="url(#SVGID_4_)">
+			<g>
+				<defs>
+					<rect id="SVGID_5_" width="409" height="522.6"/>
+				</defs>
+				<clipPath id="SVGID_6_">
+					<use xlink:href="#SVGID_5_"  overflow="visible"/>
+				</clipPath>
+				<path clip-path="url(#SVGID_6_)" fill="#596563" d="M204.5,3.4c-73,0-139.6,19-199.9,57.9C3,255.6,3,423.8,204.5,522.1
+					C406,423.8,406,255.6,404.4,61.3C344.1,22.4,277.5,3.4,204.5,3.4 M184.7,308c-19-31.7-33.3-58.7-50-98.4h-1.6
+					c3.2,63.5,11.9,119,19.8,171.3l-50.8-3.2c-17.4-82.1-30.1-164.2-30.1-276l63.5-7.9l70.6,144.4h1.6l70.6-144.4l58.7,7.9
+					c0,111.8-12.7,193.9-30.1,276l-50.8,3.2c7.9-52.3,16.7-107.9,19.8-171.3h-1.6c-16.7,39.7-30.9,66.6-50,98.4H184.7z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
