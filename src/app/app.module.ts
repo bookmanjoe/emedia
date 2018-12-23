@@ -35,7 +35,7 @@ import { Wer2CarouselComponent } from './wer2-carousel/wer2-carousel.component';
     AppRoutingModule,
     AngularFontAwesomeModule,
     AgmCoreModule.forRoot({
-      apiKey:"AIzaSyDDR94AIMmSbfaPgqtXwtvV9PxrbozvnuQ"
+      apiKey:""
     }),
     CarouselModule.forRoot()
   ],

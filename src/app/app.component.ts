@@ -87,6 +87,7 @@ function removeSection1Animations(section){
     function removeWieso3Animations(){
       $('#wieso3-header').removeClass('animated fadeInDown delay-1s fast');
       $('#wieso3-details').removeClass('animated fadeInDown delay-1s slow');
+      $('#wieso3-details')
     }
 
     function addWie2Animations(){
@@ -372,7 +373,7 @@ function removeSection1Animations(section){
 
       $("#loading").delay(3000).fadeOut("slow");
       $('#fullpage').fullpage({
-        licenseKey: 'EA26EC0D-13A84407-961F3DBD-832CEB96',
+        licenseKey: '',
         anchors: ['home'],
         controlArrows: false
         
