@@ -1,0 +1,134 @@
+agm-map{
+    height: 20em;
+    width: 100%;
+}
+
+ul.was1-list {
+    padding: 1em;
+    list-style-type: none;
+    color: white;
+    
+}
+
+ul.was1-list li {
+   margin: 0 0.6em 0 0.6em;
+   opacity: 0.7;
+ filter: alpha(opacity=70);
+}
+
+ul.was1-list li:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    color: white;
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+hr.was1-list-divider-bottom{
+    margin-top: -1.2em;
+        border: 0; 
+        height: 1px; 
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+hr.was1-list-divider-top{
+    margin-bottom: -0.2em;
+        border: 0; 
+        height: 1px; 
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+#was2-text-wrapper{
+    -moz-box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
+    box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
+}
+
+.was-text-light-black{
+    font-size: 0.9em;
+    font-family: unit-light;
+    color:black;
+}
+
+.was-text-light-white{
+    font-size: 0.9em;
+    font-family: unit-light;
+    color:white;
+}
+
+.was-header-black{
+    font-size: 1em;
+    font-family: unit-black;
+    color:black;
+}
+
+.was-header-white{
+    font-size: 1em;
+    font-family: unit-black;
+    color:white;
+}
+
+.was-header-light-italic-black{
+    font-size: 1em;
+    font-family: unit-light-italic;
+    color:black;
+}
+
+.was-header-light-italic-white{
+    font-size: 1em;
+    font-family: unit-light-italic;
+    color:white;
+}
+
+.skill-header-italic-white{
+    font-size: 1em;
+    font-family: unit-light-italic;
+    color:white;
+}
+
+.skill-header-italic-black{
+    font-size: 1em;
+    font-family: unit-light-italic;
+    color:black;
+}
+
+#was2-skills-wrapper{
+    -moz-box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
+    box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
+}
+
+ul.skill-list{
+    list-style-type: none;
+    padding: 1em;
+    color: black;
+}
+
+.was2-skill-list{
+    color: black;
+    font-size: 1.2em;
+    font-family: unit-black;
+}
+
+.was-skill-list-black{
+    color: black;
+    font-size: 1.2em;
+    font-family: unit-black;
+}
+.was-skill-list-white{
+    color: white;
+    font-size: 1.2em;
+    font-family: unit-black;
+}
+
+.skill-list-icon{
+    padding-right: 1.6em;
+}
+
+#was1-angle-down-container{
+    position: absolute;
+       color: white;
+       display: inline;
+       bottom:1em;
+       width:100%;
+       z-index:100;
+}

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as L from 'leaflet';
 
 @Component({
   selector: 'app-map',
@@ -7,15 +6,8 @@ import * as L from 'leaflet';
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
-
-  options = {
-    layers: [
-        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18 })
-    ],
-    zoom: 5,
-    center: L.latLng(46.879966, -121.726909)
-  };
-
+  latitude= 53.1378685;
+  longitude= 8.2143853;
   constructor() { }
 
   ngOnInit() {

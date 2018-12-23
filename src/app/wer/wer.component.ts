@@ -8,23 +8,28 @@ declare var $: any;
   styleUrls: ['./wer.component.scss']
 })
 export class WerComponent implements OnInit {
-
+  latitude= 53.1378685;
+  longitude= 8.2143853;
   constructor() { }
 
+  
   ngOnInit() {
 
+    
+
     $(document).ready(function () {
-      console.log("ready!");
       
-      $('#fullpage-wer').fullpage({
-        navigation: true,
-        responsiveWidth: 700,
+      
+
+
+      /* $('#fullpage-wer').fullpage({
         anchors: ['wer-1', 'wer-2', 'wer-3', 'wer-4'],
-        parallax: true,
         onLeave: function (origin, destination, direction) {
           console.log("Leaving section" + origin.index);
         },
-      });
+      }); */
+
+      
     });
   }
 

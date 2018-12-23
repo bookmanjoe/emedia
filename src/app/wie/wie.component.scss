@@ -1,0 +1,120 @@
+agm-map{
+    height: 20em;
+    width: 100%;
+}
+
+.wie2-italic-header{
+    font-family: unit-light-italic;
+    font-size: 0.9em;
+    color: black;
+}
+
+.wie2-ultra-header{
+    font-family: unit-ultra;
+    font-size: 1em;
+    color: black;
+}
+
+.wie2-text{
+    font-size: 0.9em;
+    color: black;
+    font-family: unit-light;
+}
+
+#wie2-carousel{
+    min-height: 300px;
+    -moz-box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
+    box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
+}
+
+#wie2-placeholder{
+    height:50%;
+}
+#wie2-carousel{
+    height:100px;
+}
+
+.wie3-detail-text{
+    font-size: 0.9em;
+    color: black;
+    font-family: unit-light;
+}
+
+.wie3-light-italic-header{
+    font-size: 0.9em;
+    color: black;
+    font-family: unit-light-italic;
+    text-align: center;
+}
+
+.wie3-ultra-header{
+    font-size: 4em;
+    color: red;
+    font-family: unit-ultra;
+    text-align: center;
+}
+
+.wie4-light-italic-header{
+    font-size: 0.9em;
+    color: black;
+    font-family: unit-light-italic;
+    text-align: center;
+}
+.wie4-detail-text{
+    font-size: 0.9em;
+    color: black;
+    font-family: unit-light;
+    text-align: center;
+}
+.wie4-black-header{
+    font-size: 1em;
+    font-family: unit-black;
+    color: black;
+    text-align: center;
+}
+
+#wie4-text-box{
+    background: rgb(255, 255, 250);
+    color: black;
+    -webkit-box-shadow: 54px 50px 8px 1px rgba(0,0,0,0.6);
+-moz-box-shadow: 54px 50px 8px 1px rgba(0,0,0,0.6);
+box-shadow: 54px 50px 8px 1px rgba(0,0,0,0.6);
+padding: 3em;
+}
+
+#wie1-angle-down-container{
+    position: absolute;
+       color: white;
+       display: inline;
+       bottom:1em;
+       width:100%;
+       z-index:100;
+}
+
+#wie1-angle-right-container{
+    position: absolute;
+       color: white;
+       display: inline;
+       bottom:1em;
+       width:10em;
+}
+
+
+/* #wie4-text-box:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    width: 0;
+    height: 0;
+    border: 54px solid transparent;
+    border-top-color: white; 
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -27px;
+    margin-bottom: -54px;
+    -webkit-box-shadow: 54px 50px 8px 1px rgba(0,0,0,0.6);
+    -moz-box-shadow: 54px 50px 8px 1px rgba(0,0,0,0.6);
+    box-shadow: 54px 50px 8px 1px rgba(0,0,0,0.6);
+} */

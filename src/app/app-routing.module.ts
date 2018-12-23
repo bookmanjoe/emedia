@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { WieComponent } from './wie/wie.component';
 
 const routes: Routes = [
-  { path: '',  redirectTo: '/wieso', pathMatch: 'full' },
+  { path: '',  redirectTo: '/', pathMatch: 'full' },
   { path: 'wieso', component: WiesoComponent },
   { path: 'wie', component: WieComponent },
   { path: 'was', component: WasComponent },

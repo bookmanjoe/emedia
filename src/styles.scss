@@ -1,38 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "../node_modules/font-awesome/css/font-awesome.css";
 @import "../node_modules/fullpage.js/dist/fullpage.css";
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
-@font-face{
+@font-face {
     font-family: 'unit-black';
     font-weight: normal;
     font-style: normal;
     src: url('./assets/font/Unit-Black.otf') format('opentype');
 }
 
-@font-face{
+@font-face {
     font-family: 'unit-bold';
     src: url('./assets/font/Unit-Bold.otf') format('opentype');
 }
 
-@font-face{
+@font-face {
     font-family: 'unit-light';
     src: url('./assets/font/Unit-Light.otf') format('opentype');
 }
 
-@font-face{
+@font-face {
     font-family: 'unit-light-italic';
     src: url('./assets/font/Unit-LightItalic.ttf') format('truetype');
 }
 
-@font-face{
+@font-face {
     font-family: 'unit-ultra';
     src: url('./assets/font/Unit-Ultra.otf') format('opentype');
 }
+
 body {
     font-family: 'unit-black';
-    background:  #999;
+    background: white;
 }
 
 p {
@@ -46,7 +46,10 @@ p {
 h3 {
     font-family: 'unit-bold';
 }
-a, a:hover, a:focus {
+
+a,
+a:hover,
+a:focus {
     color: inherit;
     text-decoration: none;
     transition: all 0.3s;
@@ -58,26 +61,57 @@ a, a:hover, a:focus {
     align-items: stretch;
 }
 
+.top-placeholder-20 {
+    height: 20vh;
+}
+
+.top-placeholder-15 {
+    height: 15vh;
+}
+
+.top-placeholder-10 {
+    height: 10vh;
+}
+
+.top-placeholder-5 {
+    height: 5vh;
+}
+
 #sidebar {
     min-width: 320px;
     max-width: 320px;
     min-height: 100vh;
     margin-left: -320px;
     background: #fff;
-    color: rgb(15, 15, 15);;
+    color: rgb(15, 15, 15);
     transition: all 0.3s;
-    z-index: 9999;
-    opacity: 0.6;
-    filter: alpha(opacity=60);
+    z-index: 10001;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    position: fixed;
 }
 
 #sidebar.active {
     margin-left: 0px;
 }
 
+#sidebarCollapse {
+    display: block;
+}
+
+#sidebarCollapse.active {
+    display: none;
+}
+
+.sidebar-close {
+    color: black;
+    text-align: right;
+    padding: 4px;
+}
+
 #sidebar .sidebar-header {
     padding: 20px;
-    color:#ff0037;
+    color: #ff0037;
     background: #fff;
 }
 
@@ -98,12 +132,14 @@ a, a:hover, a:focus {
     display: block;
     font-family: unit-light;
 }
+
 #sidebar ul li a:hover {
     color: #fff;
     background: #ff0037;
 }
 
-#sidebar ul li.active > a, a[aria-expanded="true"] {
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
     color: #fff;
     background: #ff0037;
 }
@@ -114,14 +150,16 @@ ul ul a {
     background: #fff;
 }
 
-#sidebar hr{
+#sidebar hr {
     margin-left: 5px;
     margin-right: 5px;
-    border: 0; 
-    height: 1px; 
+    border: 0;
+    height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
+
 #enormediaLogo {
+    content: url("./assets/img/logos/enormedia.png");
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -130,299 +168,637 @@ ul ul a {
 }
 
 #navbarTop {
-    height:40px;
+    height: 80px;
     z-index: 9999;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
 }
 
 #wieso1 {
- background: url('./assets/img/wieso/wieso-1.png') top left no-repeat;
- height: 0;
- background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
-    background-position: center center;   
+    background: url('./assets/img/wieso/wieso-1.png') top left no-repeat;
+    height: 100vh !important;
+    width: auto;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
 }
 
 #wieso2 {
-    margin-top: -40px;
-    background: url('./assets/img/wieso/grayBackground.png') top left no-repeat;
-    height: 0;
-    background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
-    background-position: center center; 
+    background: url('./assets/img/background/grayBackground.png') top left no-repeat;
+    height: 99.9vh !important;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    position:relative;
 }
 
 #wieso3 {
-    margin-top: -40px;
     background: url('./assets/img/wieso/wieso-3.png') top left no-repeat;
-    height: 0;
-    background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
-    background-position: center center; 
+    height: 99.9vh !important;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    position:relative;
 }
 
 #wieso4 {
-    margin-top: -40px;
-    background: url('./assets/img/was/was-7.png') top left no-repeat;
+    background: url('./assets/img/background/redBackground.png') top left no-repeat;
+    height: 20vh;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    position:relative;
+}
+
+#wie1 {
+    background: url('./assets/img/background/redBackground.png') top left no-repeat;
+    height: 100vh;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+#wie1-mann-background {
+    background: url('./assets/img/wie/wie1-mann.png') top left no-repeat;
+    height: 90vh;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    opacity: 0.4;
+}
+
+#wie2 {
+    background: url('./assets/img/background/grayBackground.png') top left no-repeat;
+    height: 100vh;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#wie2-text-wrapper {
+    background: url('./assets/img/wie/wie2-text.png') top left no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 5em;
+    -moz-box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
+}
+
+#wie3 {
+    background: url('./assets/img/wie/wie-3.png') top left no-repeat;
+    height: 100vh;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#wie4 {
+    background: url('./assets/img/wie/wie-4.png') top left no-repeat;
+    height: 100vh;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#regiopinion-logo {
+    margin-top: 1em;
+    height: 3em;
+    background: url('./assets/img/logos/regiopinion.png') top left no-repeat;
+    background-size: auto 3em;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#was1 {
+    background: url('./assets/img/background/redBackground.png') top left no-repeat;
+    height: 100vh;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+#was2 {
+    background: url('./assets/img/was/was-2.png') top left no-repeat;
+    height: 100vh;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#was3 {
+    background: url('./assets/img/was/was-3-verteilung.png') top left no-repeat;
+    height: 100vh;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#was4 {
+    background: url('./assets/img/was/was-4.png') top left no-repeat;
+    height: 100vh;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#was5 {
+    background: url('./assets/img/was/was-5.png') top left no-repeat;
     height: 0;
-    background-size:     cover;                      /* <------ */
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#was6 {
+    background: url('./assets/img/was/was-6.png') top left no-repeat;
+    height: 100vh;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#was7 {
+    background: url('./assets/img/was/was-7.png') top left no-repeat;
+    height: 100vh;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#wer1 {
+    background: url('./assets/img/wer/wer-1.png') top left no-repeat;
+    height: 100vh;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+#wer2 {
+    background: url('./assets/img/background/grayBackground.png') top left no-repeat;
+    height: 100vh;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#wer3 {
+    background: url('./assets/img/background/grayBackground.png') top left no-repeat;
+    height: 100vh;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#wer3 {
+    background: url('./assets/img/background/grayBackground.png') top left no-repeat;
+    height: 100vh;
+    background-size: cover;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* #wer4 {
+    background: url('./assets/img/background/redBackground.png') top left no-repeat;
+    height:20vh;
+    background-size:     cover;                 
     background-repeat:   no-repeat;
     background-position: center center; 
-}
-#sectionContent.active{
-    margin-left: -320px;
-}
-.sub-navbar{
-    position: fixed;
-    z-index: 8999; 
-    margin-top: 24px; 
+} */
+
+.sub-navbar {
+    position: relative;
+    z-index: 8999;
     color: white;
+    padding: 1em;
+    margin-left: -1em;
 }
-.sub-navbar a{
-    margin-top:10px;
- padding: 10px;
+
+.sub-navbar a.active {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1.2em !important;
+    font-weight: normal !important;
+    opacity: 1;
+    filter: alpha(opacity=100);
 }
-.sub-navbar-divider{
+
+.sub-navbar a {
+    margin-top: 10px;
+    padding: 10px;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+.sub-navbar a:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.sub-navbar-divider {
     margin-left: 0px;
     width: 200px;
 }
-#fp-nav{
+
+#fp-nav {
     display: none !important;
 }
-.angle-right-container{
-position: absolute;
-   right: 10px;
-   color: white;
-   display: inline;
-   top:50%;
-   width: 180px;
+
+.angle-right-container {
+    position: absolute;
+    width: 12em;
+    right: 1em;
+    color: white;
+    display: inline;
+    top: 50vh;
+    text-align: right;
 }
 
-.angle-right{
-} 
+.sm-angle-right-container {
+    position: absolute;
+    width: 12em;
+    right: 1em;
+    color: white;
+    display: inline;
+    top: 100vh;
+    text-align: right;
+    display: none;
+}
+
+.sm-angle-left-container {
+    position: absolute;
+    width: 12em;
+    right: 1em;
+    color: white;
+    display: inline;
+    top: 100vh;
+    text-align: right;
+    display: none;
+}
+
+.angle-left-container {
+    position: absolute;
+    color: white;
+    display: inline;
+    top: 50vh;
+    left: 1em;
+    width: 8em;
+}
+
+.angle-right-container-black {
+    position: absolute;
+    right: 10px;
+    color: black;
+    display: inline;
+    top: 50%;
+    width: 180px;
+}
+
+.angle-down-container-black {
+    position: absolute;
+    color: black;
+    display: inline;
+    bottom: 2vh;
+    width: 100vh;
+}
 
 .angle-right-text {
     font-family: unit-light-italic;
-    color:white;
+    font-size: 0.8em;
+    margin-top: 1em;
+    margin-right: -4em;
+}
+
+.angle-left-text {
+    font-family: unit-light-italic;
+    font-size: 0.8em;
+    margin-top: 1em;
+    margin-left: -2em;
+}
+
+.angle-down-text {
+    font-family: unit-light-italic;
     font-size: 0.8em;
     margin-top: 1em;
 }
 
-#wieso1-text {
- color: white;
- font-family: unit-light-italic;
- 
-}
-
-#wieso2-text {
+#wieso2-text-wrapper {
     color: black;
     font-family: unit-light-italic;
-   }
-
-.wieso1-text-animation{
-    animation-name: wieso1-text-animation;
-    animation-duration: 2s;
+    background: url("./assets/img/wieso/em.svg") top left no-repeat;
+    background-size: contain;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 80%;
 }
 
-@keyframes wieso1-text-animation {
-    from {
-        transform: translate(0px,-1000px) scale(0) ;}
-    to{transform: translate(0px,0px) scale(1) ;}
+#wer2-mitarbeiter-wrapper {
+    background: url("./assets/img/wieso/em.svg") top left no-repeat;
+    background-size: contain;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#item-mitarbeiter-kolja {
+    background: url("./assets/img/wer/mitarbeiter/kolja-fuge.png") top left no-repeat;
+    background-size: contain;
+    /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 34em;
 }
 
 .text-question {
-    font-size: 18px;
+    //font-size: 1.2em;
     color: white;
-    line-height: 0.4em;
+    //line-height: 0.4em;
     font-family: unit-light;
 }
 
 .text-buzzword {
     font-family: unit-ultra;
-    font-size: 192px;
-    margin:5px;
+    //font-size: 10em;
+    margin: 5px;
     color: white;
     line-height: 0.8em;
 }
 
-.text-details{
+.text-details {
     font-size: 0.9em;
     color: white;
     font-family: unit-light;
 }
 
-.text-black-header{
+.text-black-header {
     font-family: unit-black;
-    color:black;
+    color: black;
     font-size: 1em;
 }
 
-.text-black-details{
+.text-black-details {
     font-family: unit-light;
-    color:black;
+    color: black;
     font-size: 0.9em;
 }
 
-.text-black-umsatz-label{
-    font-family: unit-black;
-    color:rgb(50, 50, 50);
-    font-size: 1em;
-}
-
-.text-black-umsatz-number{
-    font-family: unit-ultra;
-    color:rgb(50, 50, 50);
-    font-size: 5em;
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-top: -0.3em;
-}
-
-#wieso2-haushalt {
-    margin-top: -1.6em;
-}
-
-#wieso2-partner {
-    margin-top: -1.6em;
-}
-
-.text-black-haushalt-label{
-    font-family: unit-black;
-    color:rgb(100, 100, 100);
-    font-size: 0.9em;
-    margin-left: 1em;
-}
-
-.text-black-haushalt-number{
-    font-family: unit-ultra;
-    color:rgb(100, 100, 100);
-    font-size: 3em;
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-top: -0.35em;
-}
-
-.text-black-partner-home-number{
-    font-family: unit-ultra;
-    color:rgb(100, 100, 100);
-    font-size: 12em;
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-top: -0.35em;
-}
-
-.text-black-partner-home-label{
-    font-family: unit-black;
-    color:rgb(100, 100, 100);
-    font-size: 0.9em;
-    margin-left: 4em;
-    margin-top: 3em;
-}
-
-.text-black-verteilpartner-number{
-    font-family: unit-ultra;
-    color:rgb(50, 50, 50);
-    font-size: 6em;
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-top: -0.25em;
-}
-
-.text-black-verteilpartner-label{
-    font-family: unit-black;
-    color:rgb(50, 50, 50);
-    font-size: 0.9em;
-    margin-left: -0.6em;
-    margin-top: 2em;
-}
-
-.text-black-promotion-number{
-    font-family: unit-ultra;
-    color:rgb(100, 100, 100);
-    font-size: 6em;
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-top: -0.7em;
-}
-
-.text-black-promotion-label{
-    font-family: unit-black;
-    color:rgb(100, 100, 100);
-    font-size: 0.9em;
-    margin-left: -0.4em;
-    margin-top: -0.8em;
-}
-
-.text-black-verlag-label{
-    font-family: unit-black;
-    color:rgb(40, 40, 40);
-    font-size: 0.9em;
-    margin-left: -0.4em;
-    margin-top: -0.8em;
-}
-
-.text-black-verlag-number{
-    font-family: unit-ultra;
-    color:rgb(40, 40, 40);
-    font-size: 8em;
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-top: -0.7em;
-}
-
-.text-black-druck-label{
-    font-family: unit-black;
-    color:rgb(100, 100, 100);
-    font-size: 0.9em;
-    margin-left: -0.4em;
-    margin-top: -0.8em;
-}
-
-.text-black-druck-number{
-    font-family: unit-ultra;
-    color:rgb(100, 100, 100);
-    font-size: 8em;
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-top: -0.7em;
-    margin-left: 0.2em;
-}
-
-#wieso2-verlag{
-    margin-top: -0.8em;
-}
-
-#wieso2-data-wrapper{
-    opacity: 0.8;
-}
-
-hr.content-text-divider{
-    margin-top:0.1em;
+hr.content-text-divider {
+    margin-top: 0.1em;
     margin-bottom: 0.1em;
-        border: 0; 
-        height: 1px; 
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
 }
 
-.customerBox {
- border: 1px solid rgb(100, 100, 100);
- margin-top: 0.2em;
- margin-left: 0.2em;
- margin-right: 0.2em;
- margin-bottom: 0.2em;
- width: 100%;
- min-height: 140px;
- display: flex;
- align-items: center;
+hr.wie2-content-text-divider {
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-a img.customerLogo {
+.footer-navbar {
+    position: relative;
+    z-index: 8999;
+    color: red;
+    bottom: 5em;
+    left: 2em;
+}
+
+.footer-navbar a.active {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1.2em;
+    opacity: 1;
+    z-index: 8999;
+    filter: alpha(opacity=100);
+}
+
+.footer-navbar a {
+    margin-top: 10px;
+    padding: 10px;
+    opacity: 0.7;
+    z-index: 8999;
+    filter: alpha(opacity=70);
+}
+
+.subwayLogo {
+    content: url("./assets/img/customers/subway-logo.png");
+}
+
+.milramLogo {
+    content: url("./assets/img/customers/milram-logo.png");
+}
+
+.map-header-text {
+    font-family: unit-black;
+    color: white;
+    font-size: 0.8em;
+    display: block !important;
+}
+
+.map-address-text {
+    font-family: unit-light;
+    color: white;
+    font-size: 0.7em;
+    display: block !important;
+}
+
+#loading {
+    background-color: white;
+    height: 100%;
     width: 100%;
-    height: auto;
-    padding: 1.6em;
+    position: fixed;
+    z-index: 1;
+    margin-top: 0px;
+    top: 0px;
+    z-index: 100000;
 }
 
-@media (max-width: 768px) {
+#loading-logo {
+    background: url('./assets/img/logos/enormedia.png') top left no-repeat;
+    background-size: 2em auto;
+    height: 2em;
+}
+
+#loading-center {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 150px;
+    width: 150px;
+    margin-top: -75px;
+    margin-left: -75px;
+}
+
+.object {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 0, 0);
+    float: left;
+    margin-right: 20px;
+    margin-top: 65px;
+    -moz-border-radius: 50% 50% 50% 50%;
+    -webkit-border-radius: 50% 50% 50% 50%;
+    border-radius: 50% 50% 50% 50%;
+}
+
+#object_one {
+    -webkit-animation: object_one 1.5s infinite;
+    animation: object_one 1.5s infinite;
+}
+
+#object_two {
+    -webkit-animation: object_two 1.5s infinite;
+    animation: object_two 1.5s infinite;
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+}
+
+#object_three {
+    -webkit-animation: object_three 1.5s infinite;
+    animation: object_three 1.5s infinite;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.navigation-footer {
+    background-color: black;
+    opacity: 0.4;
+    height: 10vh;
+    bottom: 0;
+    position: absolute;
+    display: none;
+    margin-left: auto;
+}
+
+#wieso1-buzzword {
+
+}
+
+.angle-down-container{
+    position: absolute;
+       color: white;
+       display: inline;
+       bottom: 2vh;
+       width: 100%;
+       z-index:100;
+}
+
+.black{
+    color:black !important;
+}
+
+@-webkit-keyframes object_one {
+    75% {
+        -webkit-transform: scale(0);
+    }
+}
+
+@keyframes object_one {
+    75% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+    }
+}
+
+@-webkit-keyframes object_two {
+    75% {
+        -webkit-transform: scale(0);
+    }
+}
+
+@keyframes object_two {
+    75% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+    }
+}
+
+@-webkit-keyframes object_three {
+    75% {
+        -webkit-transform: scale(0);
+    }
+}
+
+@keyframes object_three {
+    75% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 11px;
+    }
     #sidebar.active {
         margin-left: 0;
+    }
+    #wieso1-footer {
+        display: none;
+    }
+    #wieso1 {
+        background: url('./assets/img/background/redBackground.png') top left no-repeat;
+        height: 100vh !important;
+        width: auto;
+        background-size: cover;
+        /* <------ */
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .navigation-footer {
+        display: block;
+    }
+    .angle-left-container {
+        top: 91vh;
+        z-index: 200;
+    }
+    .angle-right-container {
+        top: 91vh;
+        z-index: 200;
     }
 }

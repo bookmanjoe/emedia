@@ -1,56 +1,106 @@
+<!-- <div id="loading">
+    <div id="loading-center">
+      
+    <div id="loading-center-absolute">
+      <div class="row">
+          <div id="loading-logo" class="row justify-content-center"></div>
+      </div>
+      <div class="row">
+    <div class="object" id="object_one"></div>
+    <div class="object" id="object_two"></div>
+    <div class="object" id="object_three"></div>
+  </div>
+    </div>
+    </div>
+    </div> -->
+
  <div class="wrapper">
+    
     <!-- Sidebar -->
     <nav id="sidebar">
+        <div class="sidebar-close">
+            <fa id="sidebarClose" size="2x" name="fas fa-times"></fa>
+        </div>
       <div class="sidebar-header">
-        <h3 class=sidebar-header-label>Menü</h3>
+        <h3 class=sidebar-header-label>MENÜ</h3>       
     </div>
     <hr/>
     <ul class="list-unstyled components">
-      <p>WIESO ENORMEDIA?</p>
+      <p><a id="sidebar-wieso-1"> WIESO ENORMEDIA?</a></p>
       <li>
-        <a href="#">ZAHLEN</a>
+        <a id="sidebar-wieso-2">ZAHLEN</a>
       </li>
       <li>
-        <a href="#">KUNDEN</a>
+        <a id="sidebar-wieso-3">KUNDEN</a>
     </li>
     </ul>
-    <hr/>
+   
     <ul class="list-unstyled components">
-        <p>WIE ARBEITET ENORMEDIA?</p>
+        <p><a id="sidebar-wie-1"> WIE ARBEITET ENORMEDIA?</a></p>
         <li>
-          <a href="#">PROZESS</a>
+          <a id="sidebar-wie-2">PROZESS</a>
         </li>
         <li>
-          <a href="#">FEINROT</a>
+          <a id="sidebar-wie-3">FEINROT</a>
       </li>
       <li>
-        <a href="#">REGIOPINION</a>
+        <a id="sidebar-wie-4">REGIOPINION</a>
+      </li>
+      </ul>
+      <ul class="list-unstyled components">
+          <p><a id="sidebar-was-1"> WAS LEISTET ENORMEDIA?</a></p>
+          <li>
+            <a id="sidebar-was-2">ANZEIGEN</a>
+          </li>
+          <li>
+            <a id="sidebar-was-3">VERTEILUNG</a>
+        </li>
+        <li>
+          <a id="sidebar-was-4">DRUCK & VERARBEITUNG</a>
+        </li>
+        <li>
+          <a id="sidebar-was-5">PLAKATE</a>
+        </li>
+        <li>
+          <a id="sidebar-was-6">DIGITAL</a>
+        </li>
+        <li>
+          <a id="sidebar-was-7">RUNDFUNK</a>
+        </li>
+        </ul>
+        <ul class="list-unstyled components">
+            <p><a id="sidebar-wer-1"> WER IST ENORMEDIA?</a></p>
+          <li>
+            <a id="sidebar-wer-2">ANSPRECHPARTNER</a>
+          </li>
+          <li>
+            <a id="sidebar-wer-3">JOBS</a>
+        </li>
+        </ul>
+      <hr/>
+      <ul class="list-unstyled components">
+        <li>
+          <a href="#">KONTAKT</a>
+        </li>
+        <li>
+          <a href="#">IMPRESSUM</a>
+      </li>
+        <li>
+          <a href="#">DATENSCHUTZ</a>
       </li>
       </ul>
     </nav>
 
-    <!-- Page Content -->
     <div id="content">
-        <nav id="navbarTop" class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                    <fa id="sidebarCollapse" name="fas fa-bars"></fa>
-                    <img src="../assets/img/enormedia.png" id="enormediaLogo"> 
-            </div>
-        </nav>
-        <nav class="sub-navbar">
-              <a href="#">WIESO?</a>
-              <a href="#">WIE?</a>
-            <a href="#">WAS?</a>
-          <a href="#">WER?</a>
-          <hr class="sub-navbar-divider"/>
-        </nav>
-        <div id="sectionContent">
-            <router-outlet></router-outlet>
+        
+        <div id="fullpage">            
+            <div class="section fp-auto-height">
+                <div class="slide" data-anchor="wieso"> <app-wieso></app-wieso> </div>
+                <div class="slide" data-anchor="wie"> <app-wie></app-wie></div>
+                <div class="slide" data-anchor="was"> <app-was></app-was></div>
+                <div class="slide" data-anchor="wer"> <app-wer></app-wer></div>
+            </div> 
+        </div>               
         </div>
-        <div style="height: 300px;"
-     leaflet 
-     [leafletOptions]="options">
-</div>
-    </div>
-</div>  
+    </div> 
 

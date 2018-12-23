@@ -1,0 +1,59 @@
+agm-map{
+    height: 20em;
+    width: 100%;
+}
+
+.jobs-details-text{
+    font-size:0.9em;
+    font-family: unit-light;
+    color: black;
+    padding: 0 8em 0 8em;
+}
+
+.jobs-header-text{
+    font-size:1em;
+    font-family: unit-black;
+    color: black;
+    text-align: center;
+}
+
+.jobs-job-text{
+    font-size:3.2em;
+    font-family: unit-ultra;
+    color: red;
+    text-align: center;
+}
+
+.jobs-search-text{
+    font-size:1em;
+    font-family: unit-light-italic;
+    color: black;
+    text-align: center;
+}
+
+hr.job-divider-top{
+    margin-top: 0.7em;
+        border: 0; 
+        height: 2px; 
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+hr.job-divider-bottom{
+    margin-top: 0.1em;
+        border: 0; 
+        height: 2px; 
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+#wer1-angle-down-container{
+    position: absolute;
+       color: white;
+       display: inline;
+       bottom:1em;
+       width:100%;
+       z-index:100;
+}
+
+#wer1-details{
+    margin-top: 2em;
+}

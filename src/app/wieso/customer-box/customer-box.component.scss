@@ -1,0 +1,24 @@
+.customerBox {
+    border: 1px solid rgb(100, 100, 100);
+    margin-top: 0.2vw;
+    margin-left: 0.2vw;
+    margin-right: 0.2vw;
+    margin-bottom: 0.2vw;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+}
+
+.customerLogo {
+    width: 100%;
+    height: auto;
+    padding: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    .customerBox {
+        height: 10vh;
+    }
+    
+}

@@ -1,0 +1,279 @@
+agm-map{
+    height: 20em;
+    width: 100%;
+}
+
+#wieso1-text {
+    color: white;
+    font-family: unit-light-italic;
+    
+   }
+#wieso1-angle-down-container{
+
+}
+
+#wieso2-haushalt {
+    height: 6vh;
+}
+
+#wieso2-sm-haushalt {
+    height: 6vh;
+} 
+
+#wieso2-partner {
+}
+
+#promotion-row{
+    height: 6vh;
+}
+
+#promotion-sm-row{
+    height: 6vh;
+}
+
+#verteilpartner-row{
+    height: 6vh;
+}
+
+#verteilpartner-sm-row{
+    height: 6vh;
+}
+
+#partner2{
+    height: 12vh; 
+}
+
+#partner1{
+    text-align: right;
+}
+
+#partner2-sm{
+    height: 12vh; 
+}
+
+#wieso2-verlag{
+    height: 8vh;
+}
+
+#wieso2-sm-verlag{
+    height: 8vh;
+}
+
+#wieso2-numbers{
+    height: 6vh;
+}
+#wieso2-data-wrapper{
+    opacity: 0.8;
+}
+
+
+#wieso2-umsatz-label{
+
+}
+#wieso2-partner-home-number{
+    height:12vh
+}
+
+#wieso2-partner-home-label{
+    height:8vh
+}
+.text-black-umsatz-label{
+    font-family: unit-black;
+    color:rgb(50, 50, 50);
+    //font-size: 1vw;
+    text-align: right;
+    padding-right: 2px;
+    padding-left:2px;
+}
+
+.text-black-umsatz-number{
+    font-family: unit-ultra;
+    color:rgb(50, 50, 50);
+    //font-size: 5vw;
+    line-height: 4vh;
+    //margin-top: -0.3em;
+    padding-right: 2px;
+    padding-left:2px;
+    font-size:4vh;
+}
+
+
+.text-black-haushalt-label{
+    font-family: unit-black;
+    color:rgb(100, 100, 100);
+    //font-size: 0.9vw;
+    //margin-left: 1em;
+    padding-right: 2px;
+    padding-left:2px;
+}
+
+.text-black-haushalt-number{
+    font-family: unit-ultra;
+    color:rgb(100, 100, 100);
+    //font-size: 3vw;
+    padding-right: 0px;
+    padding-left: 0px;
+    text-align: right;
+    line-height: 4vh;
+    padding-right: 2px;
+    padding-left:2px;
+    font-size:4vh;
+    //margin-top: -0.35em;
+}
+
+.text-black-partner-home-number{
+    font-family: unit-ultra;
+    color:rgb(100, 100, 100);
+    //font-size: 10vw;
+    line-height: 6vh;
+    padding-right: 2px;
+    padding-left:2px;
+    font-size:6vh;
+    //margin-top: -0.35em;
+}
+
+.text-black-partner-home-label{
+    font-family: unit-black;
+    color:rgb(100, 100, 100);
+    //font-size: 0.9vw;
+    margin-left: -2vw;
+    //margin-left: 4em;
+    //margin-top: 3em;
+    padding-right: 2px;
+    padding-left:2px;
+}
+
+.text-black-verteilpartner-number{
+    font-family: unit-ultra;
+    color:rgb(50, 50, 50);
+   //font-size: 6em;
+    padding-right: 0px;
+    padding-left: 0px;
+    line-height: 4vh;
+    //margin-top: -0.25em;
+    padding-right: 2px;
+    padding-left:2px;
+    font-size:4vh;
+    margin-left: -0.4vw;
+}
+
+.text-black-verteilpartner-label{
+    font-family: unit-black;
+    color:rgb(50, 50, 50);
+    //font-size: 0.9em;
+    text-align: right;
+    //margin-left: -0.6em;
+    //margin-top: 2em;
+    padding-right: 2px;
+    padding-left:2px;
+}
+
+.text-black-promotion-number{
+    font-family: unit-ultra;
+    color:rgb(100, 100, 100);
+    padding-right: 0px;
+    padding-left: 0px;
+    line-height: 4vh;
+    font-size:4vh;
+    padding-right: 2px;
+    padding-left:2px;
+    margin-left: -0.4vw;
+}
+
+.text-black-promotion-label{
+    font-family: unit-black;
+    color:rgb(100, 100, 100);
+    text-align: right;
+    padding-right: 2px;
+    padding-left:2px;
+}
+
+.text-black-verlag-label{
+    font-family: unit-black;
+    color:rgb(40, 40, 40);
+    //font-size: 0.9vw;
+    text-align:right;
+    //margin-left: -0.4em;
+    //margin-top: -0.8em;
+    padding-right: 2px;
+    padding-left:2px;
+}
+
+
+
+.text-black-druck-label{
+    font-family: unit-black;
+    color:rgb(100, 100, 100);
+    padding-right: 2px;
+    padding-left:2px;
+    margin-left: -2vw;
+}
+
+.text-black-druck-number{
+    font-family: unit-ultra;
+    color:rgb(100, 100, 100);
+    line-height: 4vh;
+    font-size:4vh;
+    padding-right: 2px;
+    padding-left:2px;
+}
+.text-black-verlag-number{
+    font-family: unit-ultra;
+    color:rgb(40, 40, 40);
+    //font-size: 4.6vw;
+    line-height:  4vh;
+    padding-right: 2px;
+    padding-left:2px;
+    text-align:right;
+    font-size:4vh;
+    //margin-top: -0.7em;
+}
+
+@media screen and (max-width: 572px) {
+/*     .text-black-promotion-number{
+
+        margin-left: -2vh;
+    }
+
+    .text-black-partner-home-label{
+        margin-left: -4vh;
+    } */
+}
+
+@media screen and (max-width: 768px) {
+    .text-black-promotion-number{
+
+        margin-left: -0.2vw;
+    }
+    
+    .text-black-partner-home-label{
+        margin-left: -0.6vw;
+    }
+
+    .text-black-verteilpartner-number{
+        margin-left: -0.2vw;
+    }
+
+    .text-black-druck-label{
+        margin-left: -0.6vw;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .text-black-promotion-number{
+
+        margin-left: -0.4vw;
+    }
+    
+    .text-black-partner-home-label{
+        margin-left: -1vw;
+    }
+
+    .text-black-verteilpartner-number{
+        margin-left: -0.4vw;
+    }
+
+    .text-black-druck-label{
+        margin-left: -0.2vw;
+    }
+}

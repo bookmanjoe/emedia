@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {PlatformLocation  } from '@angular/common';
 
 @Component({
   selector: 'app-customer-box',
@@ -7,10 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CustomerBoxComponent implements OnInit {
 
-  @Input() src: string;
+  @Input() logoUrl: string;
   @Input() href: string;
   
-  constructor() { }
+  constructor(private platformLocation: PlatformLocation) {
+
+   }
 
   ngOnInit() {
   }

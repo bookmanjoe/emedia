@@ -1,17 +1,35 @@
-<div id="fullpage-wieso">
-  <div id="wieso1" class="section" data-anchor="wieso-1">
+
+<section id="wieso1" class="wieso-sub-section wieso-1">
+    <nav id="navbarTopWieso" class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+                <fa class="sidebarCollapse" name="fas fa-bars"></fa>
+                <div id="enormediaLogo"></div> 
+        </div>
+    </nav>
+    <nav class="sub-navbar">
+        <a class="sub-navbar-wieso active" >WIESO?</a>
+        <a class="sub-navbar-wie ">WIE?</a>
+      <a class="sub-navbar-was" >WAS?</a>
+    <a class="sub-navbar-wer" >WER?</a>
+    <hr class="sub-navbar-divider"/>
+  </nav>
+  
+    <div class="row top-placeholder-10 d-none d-lg-block"></div>
+    <div class="row top-placeholder-5 d-none d-md-block d-lg-none"></div>
+    <div class="row top-placeholder-5 d-sm-none "></div>
+    <div class="row wieso-1-person d-sm-none">
+    </div>
     <div id="wieso1-text" class="row justify-content-center">
-      <div class="col-4"></div>
-      <div class="col-4">
+      <div class="col-lg-4 offset-lg-2 col-md-8 col-8">
         <div id="wieso1-question" class="row justify-content-center">
           <p class="text-question">WAS EINE GUTE MEDIAAGENTUR HEUTE KOSTEN SOLLTE?</p>
         </div>
-        <hr class="content-text-divider" />
+        <hr id="wieso1-divider" class="question-divider content-text-divider" />
         <div id="wieso1-buzzword" class="row justify-content-center">
           <p class="text-buzzword">NICHTS.</p>
         </div>
         <div id="wieso1-details" class="row justify-content-center">
-          <div class="col">
+          <div class="col-12 col-md-6">
             <p class="text-details">
               <font face="unit-bold">Oder sogar noch weniger.</font>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
@@ -22,7 +40,7 @@
               clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
             </p>
           </div>
-          <div class="col">
+          <div class="col-6 d-none d-md-block">
             <p class="text-details">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
               tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
               justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
@@ -30,26 +48,37 @@
               ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
               et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
           </div>
-
         </div>
       </div>
     </div>
-    <div class="angle-right-container">
-      <a routerLink="/wie">
-          <div class="row">
-              <div class="col">
-                <div class="angle-right-text">WIE ARBEITET <br> ENORMEDIA?</div>
+    <div id="wieso1-right-arrow" class="angle-right-container">
+        <a class="angle-right-button">
+            <div class="row justify-content-end">
+                <div class="col">
+                  <div class="angle-right-text">WIE ARBEITET <br> ENORMEDIA?</div>
+                </div>
+                <div class="col">
+                  <fa class="angle-right" size="4x" name="angle-right"></fa>
+                </div>
               </div>
-              <div class="col">
-                <fa class="angle-right" size="4x" name="angle-right"></fa>
-              </div>
-            </div>
-      </a>
+        </a>
+      </div>
+  <div id="wieso1-angle-down-container" class="row angle-down-container justify-content-center">
+      <div class="row justify-content-center">
+        <div id="wieso-1-angle-down-text" class="angle-down-text">SIE WOLLEN TROTZDEM ZAHLEN?</div>
+      </div>
+      <div class="row justify-content-center">
+        <fa class="angle-down" size="4x" name="angle-down"></fa>
+      </div>
+</div>   
+  <div class="row navigation-footer container-fluid align-items-end">
     </div>
-  </div>
-  <div id="wieso2" class="section" data-anchor="wieso-2">
+  </section>
+  <section id="wieso2" class="wieso-sub-section wieso-2">
+      <div class="row top-placeholder-10"></div>
+    <div id="wieso2-text-wrapper" class="col-12"> 
     <div id="wieso2-text" class="row justify-content-center">
-      <div class="col-5">
+      <div class="col-lg-5 col-md-8 col-sm-8 col-8">
         <div id="wieso2-header" class="row justify-content-center">
           <p class="text-black-header">MANCHMAL SAGEN ZAHLEN MEHR ALS WORTE.</p>
         </div>
@@ -59,67 +88,124 @@
             soloratibus cor aut ut doluptatius, tem sam antio est illenis et re vidissum serum idebistia con eost,
             idus eic te consed magniminimus et aut pore sequi consed quo bla dolupta temporio. Mincid ullati </p>
         </div>
-        <div id="wieso2-data-wrapper">
-          <div id="wieso2-numbers" class="row justify-content-center">
-            <div align="right" class="col-3 text-black-umsatz-label">EURO <br> UMSATZ IN<br> JAHR 2018</div>
-            <div class="col-6 text-black-umsatz-number"><span class="count">8000000</span></div>
-            <div col-3></div>
+        <div id="wieso2-data-wrapper" class="d-none d-sm-block">
+            <div class="row top-placeholder-5"></div>
+          <div id="wieso2-numbers" class="row">
+            <div id="wieso2-umsatz-label" class="col-3 text-black-umsatz-label">EURO <br> UMSATZ IN<br> JAHR 2018</div>
+            <div id="wieso2-umsatz-number" class="col-8 text-black-umsatz-number ">8000000</div>
           </div>
-          <div id="wieso2-haushalt" class="row justify-content-center">
-            <div class="col-2"></div>
-            <div align="right" class="col-6 text-black-haushalt-number"><span class="count">31714248</span></div>
-            <div align="left" class="col-3 text-black-haushalt-label">ERREICHBARE<br>HAUSHALTE</div>
-            <div class="col-1"></div>
+          <div id="wieso2-haushalt" class="row">
+            <div id="wieso2-haushalt-number" class="col-6 offset-3 text-black-haushalt-number">31714248</div>
+            <div id="wieso2-haushalt-label"class="col-2 text-black-haushalt-label">ERREICHBARE<br>HAUSHALTE</div>
           </div>
-          <div id="wieso2-partner" class="row justify-content-center">
-            <div id="partner1" class="col-6 float-right">
-              <div class="row float-right">
-                <div class="col-4 text-black-verteilpartner-label">VERTEIL-<br>PARTNER</div>
-                <div class="col-8 text-black-verteilpartner-number float-right"><span class="count">122</span></div>
+          <div id="wieso2-partner" class="row">
+            <div id="partner1" class="col-6">
+              <div id="verteilpartner-row" class="row">
+                <div id="wieso2-verteilpartner-label" class="col-4 offset-4 text-black-verteilpartner-label ">VERTEIL-<br>PARTNER</div>
+                <div id="wieso2-verteilpartner-number" class="col-4 text-black-verteilpartner-number "><span class="count">122</span></div>
               </div>
-              <div class="row float-right">
-                <div class="col-4 text-black-promotion-label">PROMOTION<br>PARTNER</div>
-                <div class="col-8 text-black-promotion-number"><span class="count">7500</span></div>
+              <div id="promotion-row" class="row">
+                <div id="wieso2-promotion-label" class="col-4 offset-2 text-black-promotion-label ">PROMOTION<br>PARTNER</div>
+                <div id="wieso2-promotion-number"class="col-6 text-black-promotion-number"><span class="count">7500</span></div>
               </div>
             </div>
             <div id="partner2" class="col-6">
               <div class="row">
-                <div align="left" class="col-4 text-black-partner-home-number"><span class="count">54</span></div>
-                <div align="left" class="col-4 text-black-partner-home-label">PARTNER<br>OUT-OF-HOME</div>
-                <div class="col-1"></div>
+                <div id="wieso2-partner-home-number" class="col-7 text-black-partner-home-number"><span class="count">54</span></div>
+                <div id="wieso2-partner-home-label" class="col-3 text-black-partner-home-label">PARTNER<br>OUT-OF-HOME</div>
               </div>
             </div>
           </div>
-          <div id="wieso2-verlag" class="row justify-content-center">
-            <div align="right" class="col-2 text-black-verlag-label">
+          <div id="wieso2-verlag" class="row">
+            <div id="wieso2-verlag-label" class="col-2 offset-1 text-black-verlag-label">
               VERLAGS-<br>PARTNER
             </div>
-            <div align="right" class="col-3 text-black-verlag-number">
+            <div id="wieso2-verlag-number" class="col-3 text-black-verlag-number">
               <span class="count">160</span>
             </div>
-            <div class="col-3 text-black-druck-number">
+            <div id="wieso2-druck-number" class="col-3 text-black-druck-number">
               <span class="count">712</span>
             </div>
-            <div class="col-2 text-black-druck-label">
+            <div id="wieso2-druck-label" class="col-2 text-black-druck-label ">
+              PARTNER-<br>DRUCKEREIEN
+            </div>
+          </div>
+        </div>
+        <div id="wieso2-sm-data-wrapper" class="d-block d-sm-none">
+            <div class="row top-placeholder-5"></div>
+          <div id="wieso2-sm-numbers" class="row">
+            <div id="wieso2-sm-umsatz-label" class="col-4 text-black-umsatz-label">EURO <br> UMSATZ IN<br> JAHR 2018</div>
+            <div id="wieso2-sm-umsatz-number" class="col-8 text-black-umsatz-number ">8000000</div>
+          </div>
+          <div id="wieso2-sm-haushalt" class="row">
+            <div id="wieso2-sm-haushalt-number" class="col-8 text-black-haushalt-number">31714248</div>
+            <div id="wieso2-sm-haushalt-label"class="col-4 text-black-haushalt-label">ERREICHBARE<br>HAUSHALTE</div>
+          </div>
+          <div id="wieso2-sm-partner" class="row">
+            <div id="partner1" class="col-6">
+              <div id="verteilpartner-row" class="row">
+                <div id="wieso2-sm-verteilpartner-label" class="col-6 text-black-verteilpartner-label ">VERTEIL-<br>PARTNER</div>
+                <div id="wieso2-sm-verteilpartner-number" class="col-6 text-black-verteilpartner-number "><span class="count">122</span></div>
+              </div>
+              <div id="promotion-sm-row" class="row">
+                <div id="wieso2-sm-promotion-label" class="col-6 text-black-promotion-label ">PROMOTION<br>PARTNER</div>
+                <div id="wieso2-sm-promotion-number"class="col-6 text-black-promotion-number"><span class="count">7500</span></div>
+              </div>
+            </div>
+            <div id="partner2-sm" class="col-6">
+              <div class="row">
+                <div id="wieso2-sm-partner-home-number" class="col-6 text-black-partner-home-number"><span class="count">54</span></div>
+                <div id="wieso2-sm-partner-home-label" class="col-4 text-black-partner-home-label">PARTNER<br>OUT-OF-HOME</div>
+              </div>
+            </div>
+          </div>
+          <div id="wieso2-sm-verlag" class="row">
+            <div id="wieso2-sm-verlag-lable" class="col-3  text-black-verlag-label">
+              VERLAGS-<br>PARTNER
+            </div>
+            <div id="wieso2-sm-verlag-number" class="col-3 text-black-verlag-number">
+              <span class="count">160</span>
+            </div>
+            <div id="wieso2-sm-druck-number" class="col-3 text-black-druck-number">
+              <span class="count">712</span>
+            </div>
+            <div id="wieso2-sm-druck-lable" class="col-3 text-black-druck-label ">
               PARTNER-<br>DRUCKEREIEN
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="angle-right-container">
-        <div class="row">
-          <div class="col">
-            <div class="angle-right-text">WIE ARBEITET <br> ENORMEDIA?</div>
+  
+      
+</div>
+
+<div id="wieso2-right-arrow" class="angle-right-container black">
+    <a class="angle-right-button">
+        <div class="row justify-content-end">
+            <div class="col">
+              <div class="angle-right-text">WIE ARBEITET <br> ENORMEDIA?</div>
+            </div>
+            <div class="col">
+              <fa class="angle-right" size="4x" name="angle-right"></fa>
+            </div>
           </div>
-          <div class="col">
-            <fa class="angle-right" size="4x" name="angle-right"></fa>
-          </div>
-        </div>
-      </div>
+    </a>
   </div>
-  <div id="wieso3" class="section" data-anchor="wieso-3">
-    <div id="wieso3-text" class="row justify-content-center">
+<div id="wieso2-angle-down-container" class="row angle-down-container black justify-content-center">
+  <div class="row justify-content-center">
+    <div id="wieso-2-angle-down-text" class="angle-down-text">WER VETRAUT ENORMEDIA?</div>
+  </div>
+  <div class="row justify-content-center">
+    <fa class="angle-down" size="4x" name="angle-down"></fa>
+  </div>
+</div>   
+<div class="row navigation-footer container-fluid align-items-end">
+</div>
+  </section>
+  <section id="wieso3" class="wieso-sub-section">
+      <div class="row top-placeholder-5"></div>
+        <div id="wieso3-text" class="row justify-content-center">
       <div class="col-5">
         <div id="wieso3-header" class="row justify-content-center">
           <p class="text-black-header">UNSERE KUNDEN.</p>
@@ -132,24 +218,15 @@
         </div>
       </div>
     </div>
-    <div class="angle-right-container">
-        <div class="row">
-          <div class="col">
-            <div class="angle-right-text">WIE ARBEITET <br> ENORMEDIA?</div>
-          </div>
-          <div class="col">
-            <fa class="angle-right" size="4x" name="angle-right"></fa>
-          </div>
-        </div>
-      </div>
+
     <div id="wieso3-customers" class="row justify-content-center">
-      <div class="col-10">
+      <div class="col-10 col-md-8">
         <div class="row justify-content-center">
           <div class="col-2">
-            <app-customer-box src="../../assets/img/customers/subway-logo.png" href=""></app-customer-box>
+            <app-customer-box logoUrl="subwayLogo" href=""></app-customer-box>
           </div>
           <div class="col-2">
-            <app-customer-box src="../../assets/img/customers/milram-logo.png" href=""></app-customer-box>
+            <app-customer-box logoUrl="milramLogo" href=""></app-customer-box>
           </div>
           <div class="col-2">
             <app-customer-box src="" href=""></app-customer-box>
@@ -231,5 +308,13 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </section>
+<!--   <section id="wieso4"  class="footer">
+      <agm-map [latitude]="latitude" [longitude]="longitude" >
+
+        </agm-map>
+        <div class="footer-navbar">
+            <a href="./impressum" routerLinkActive="active">IMPRESSUM</a>
+            <a href="./datenschutz" routerLinkActive="active">DATENSCHUTZ</a>
+        </div>
+      </section>  -->
