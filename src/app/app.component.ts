@@ -82,12 +82,34 @@ function removeSection1Animations(section){
     function addWieso3Animations(){
       $('#wieso3-header').addClass('animated fadeInDown delay-1s fast');
       $('#wieso3-details').addClass('animated fadeInDown delay-1s slow');
+      $('#customer-row-1').addClass('animated fadeInLeft delay-1s fast');
+      $('#customer-row-2').addClass('animated fadeInRight delay-1s slow');
+      $('#customer-row-3').addClass('animated fadeInLeft delay-2s fast');
+      $('#customer-row-4').addClass('animated fadeInRight delay-2s slow');
+      $('#customer-row-5').addClass('animated fadeInLeft delay-3s fast');
     }
 
     function removeWieso3Animations(){
       $('#wieso3-header').removeClass('animated fadeInDown delay-1s fast');
       $('#wieso3-details').removeClass('animated fadeInDown delay-1s slow');
-      $('#wieso3-details')
+      $('#customer-row-1').removeClass('animated fadeInLeft delay-1s fast');
+      $('#customer-row-2').removeClass('animated fadeInRight delay-1s slow');
+      $('#customer-row-3').removeClass('animated fadeInLeft delay-2s fast');
+      $('#customer-row-4').removeClass('animated fadeInRight delay-2s slow');
+      $('#customer-row-5').removeClass('animated fadeInLeft delay-3s fast');
+    }
+
+    function fadeInCustomers(){
+      var i = 1;
+      var milliseconds = 200;
+      var count = $('.customeBox :selected').length;
+
+      $( ".customerBox" ).each( function( index, element ){
+        console.log(index);
+        $('.customerBox:nth-child('+index+')').fadeIn(milliseconds);
+        milliseconds += 200;
+      });
+
     }
 
     function addWie2Animations(){
@@ -135,7 +157,10 @@ function removeSection1Animations(section){
     }
 
     function initWiesoScrollify(){
-      
+      scrollWie = null;
+      scrollWas = null;
+      scrollWer = null;
+      scrollWieso = null;  
       scrollWieso = $.scrollify({
         section : ".wieso-sub-section",
         interstitialSection : "",
@@ -173,15 +198,17 @@ function removeSection1Animations(section){
         afterResize:function() {},
         afterRender:function() {}
       });
+     
       addSection1Animations('#wieso1');
-      scrollWie = null;
-      scrollWas = null;
-      scrollWer = null;  
+      
       console.log("initWieso");
     };
 
     function initWieScrollify(){
  
+      scrollWie = null;
+      scrollWas = null;
+      scrollWer = null;
       scrollWieso = null;
       scrollWie = $.scrollify({
         section : ".wie-sub-section",
@@ -211,16 +238,17 @@ function removeSection1Animations(section){
         afterRender:function() {}
       });
       addSection1Animations('#wie1');
-      scrollWas = null;
-      scrollWer = null;
+      
       console.log("initWie");
 
     };
 
     function initWasScrollify(){
       
-      scrollWieso = null;
       scrollWie = null;
+      scrollWas = null;
+      scrollWer = null;
+      scrollWieso = null;
       scrollWas = $.scrollify({
         section : ".was-sub-section",
         interstitialSection : "",
@@ -249,15 +277,16 @@ function removeSection1Animations(section){
         afterRender:function() {}
       });
       addSection1Animations('#was1');
-      scrollWer = null;
+     
       console.log("initWas");
     };
 
     function initWerScrollify(){
       
-      scrollWieso = null;
       scrollWie = null;
       scrollWas = null;
+      scrollWer = null;
+      scrollWieso = null;
       scrollWer = $.scrollify({
         section : ".wer-sub-section",
         interstitialSection : "",
@@ -357,8 +386,23 @@ function removeSection1Animations(section){
 
     $(document).ready(function () {
 
+      /* $('body').on('mousewheel DOMMouseScroll', function(e){
+        if(typeof e.originalEvent.detail == 'number' && e.originalEvent.detail !== 0) {
+          if(e.originalEvent.detail > 0) {
+            console.log('Down');
+          } else if(e.originalEvent.detail < 0){
+              console.log('Up');
+          }
+        } else if (typeof e.originalEvent.wheelDelta == 'number') {
+          if(e.originalEvent.wheelDelta < 0) {
+              console.log('Down');
+          } else if(e.originalEvent.wheelDelta > 0) {
+              console.log('Up');
+          }
+        }
+      }); */
       //check element is in viewport
-      $.fn.isInViewport = function() {
+     /*  $.fn.isInViewport = function() {
         var elementTop = $(this).offset().top;
         var elementBottom = elementTop + $(this).outerHeight();
         
@@ -366,7 +410,7 @@ function removeSection1Animations(section){
         var viewportBottom = viewportTop + $(window).height();
         
         return elementBottom > viewportTop && elementTop < viewportBottom;
-        };
+        }; */
 
 
       initWiesoScrollify();
@@ -512,9 +556,26 @@ $("#wer1-angle-down-container").click(function() {
   $.scrollify.next();
 });
 
+$("#wieso2 .angle-right-container").click(function() {
+  
+  $.scrollify.instantPrevious();
+  console.log("click right")
+  $('#fullpage').fullpage.moveTo('home',1);
+  initWieScrollify();
+  removeWieso2Animations();
+});
+
 $("#wieso2-angle-down-container").click(function() {
   removeWieso2Animations();
   $.scrollify.next();
+});
+
+$("#wieso3 .angle-right-container").click(function() {
+  $.scrollify.instantMove("#1");
+  removeWieso3Animations();
+  initWieScrollify();
+  console.log("click right")
+  $('#fullpage').fullpage.moveTo('home',1);
 });
 
 $("#wie2-angle-down-container").click(function() {

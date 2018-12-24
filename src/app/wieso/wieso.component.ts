@@ -4,6 +4,7 @@ import {PlatformLocation  } from '@angular/common';
 
 declare var $: any;
 declare var textFit: any;
+
 @Component({
   selector: 'app-wieso',
   templateUrl: './wieso.component.html',
@@ -155,7 +156,18 @@ export class WiesoComponent implements OnInit {
         maxFontSize: 16
       });  */
       
+      function fadeInCustomers(){
+        var i = 1;
+        var milliseconds = 200;
+        var count = $('.customer-box :selected').length;
 
+        $( ".customer-box" ).each( function( index, element ){
+          console.log(index);
+          $('.customer-box:nth-child('+index+')').fadeIn(milliseconds);
+          milliseconds += 200;
+        });
+
+      }
 
       function fadeInNumbers(){
 
