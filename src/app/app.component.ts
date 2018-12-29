@@ -113,9 +113,54 @@ function removeSection1Animations(section){
     }
 
     function addWie2Animations(){
+
+      $('#wie2-header').addClass('animated fadeInDown delay-1s slow');
+      $('#wie2-subheader').addClass('animated fadeInDown delay-2s fast');
+      $('#wie2-details').addClass('animated fadeInDown delay-2s slow');
+      $('#wie2-placeholder').addClass('animated fadeInDown delay-1s fast');
+      $('#wie2-carousel-wrapper').addClass('animated fadeInDown delay-3s fast');
+  $('#wie2 .angle-right-container').addClass('animated fadeInRight delay-2s slow');
+  $('#wie2 .angle-left-container').addClass('animated fadeInLeft delay-2s slow');
+  $('#wie2 .angle-down-container').addClass('animated fadeInUp delay-2s slow');
+
     }
+
     function removeWie2Animations(){
-      
+      $('#wie2-header').removeClass('animated fadeInDown delay-1s slow');
+      $('#wie2-subheader').removeClass('animated fadeInDown delay-2s fast');
+      $('#wie2-details').removeClass('animated fadeInDown delay-2s slow');
+      $('#wie2-placeholder').removeClass('animated fadeInDown delay-1s fast');
+      $('#wie2-carousel-wrapper').removeClass('animated fadeInDown delay-3s fast');
+  $('#wie2 .angle-right-container').removeClass('animated fadeInRight delay-2s slow');
+  $('#wie2 .angle-left-container').removeClass('animated fadeInLeft delay-2s slow');
+  $('#wie2 .angle-down-container').removeClass('animated fadeInUp delay-2s slow');
+    }
+
+    
+    function addWie3Animations(){
+
+      $('#wie3 .angle-right-container').addClass('animated fadeInRight delay-2s slow');
+      $('#wie3 .angle-left-container').addClass('animated fadeInLeft delay-2s slow');
+      $('#wie3 .angle-down-container').addClass('animated fadeInUp delay-2s slow');
+    }
+
+    function removeWie3Animations(){
+      $('#wie3 .angle-right-container').removeClass('animated fadeInRight delay-2s slow');
+  $('#wie3 .angle-left-container').removeClass('animated fadeInLeft delay-2s slow');
+  $('#wie3 .angle-down-container').removeClass('animated fadeInUp delay-2s slow');
+    }
+
+
+    function addWie4Animations(){
+      $('#wie4 .angle-right-container').addClass('animated fadeInRight delay-2s slow');
+      $('#wie4 .angle-left-container').addClass('animated fadeInLeft delay-2s slow');
+      $('#wie4 .angle-down-container').addClass('animated fadeInUp delay-2s slow');
+    }
+
+    function removeWie4Animations(){
+      $('#wie4 .angle-right-container').removeClass('animated fadeInRight delay-2s slow');
+  $('#wie4 .angle-left-container').removeClass('animated fadeInLeft delay-2s slow');
+  $('#wie4 .angle-down-container').removeClass('animated fadeInUp delay-2s slow');
     }
 
     function addWas2Animations(){
@@ -127,16 +172,6 @@ function removeSection1Animations(section){
     function addWer2Animations(){
     }
     function removeWer2Animations(){
-      
-    }
-
-    
-
-    function addWie3Animations(){
-
-    }
-
-    function removeWie3Animations(){
       
     }
 
@@ -227,11 +262,35 @@ function removeSection1Animations(section){
       {
         addSection1Animations('#wie1')
       }
+      if($.scrollify.current().attr('id')=="wie2")
+      {
+        addWie2Animations();
+      }
+      if($.scrollify.current().attr('id')=="wie3")
+      {
+        addWie3Animations();
+      }
+      if($.scrollify.current().attr('id')=="wie4")
+      {
+        addWie4Animations();
+      }
         },
         after:function(index) {
           if($.scrollify.current().attr('id')!="wie1")
       {
         removeSection1Animations('#wie1')
+      }
+      if($.scrollify.current().attr('id')!="wie2")
+      {
+        removeWie2Animations();
+      }
+      if($.scrollify.current().attr('id')!="wie3")
+      {
+        removeWie3Animations();
+      }
+      if($.scrollify.current().attr('id')!="wie4")
+      {
+        removeWie4Animations();
       }
         },
         afterResize:function() {},
@@ -628,6 +687,44 @@ $('#wie1 .angle-left-button').on('click', function () {
   $('#fullpage').fullpage.moveTo('home',0);
 });
 
+$('#wie2 .angle-right-button').on('click', function () {
+  removeWie2Animations();
+  initWasScrollify();
+  console.log("click right")
+  $('#fullpage').fullpage.moveTo('home',2);
+});
+
+$('#wie2 .angle-left-button').on('click', function () {
+  removeWie2Animations();
+  initWiesoScrollify();
+  console.log("click left")
+  $('#fullpage').fullpage.moveTo('home',0);
+});
+
+$("#wie2 .angle-down-container").click(function() {
+  removeWie2Animations();
+  $.scrollify.next();
+});
+
+$('#wie3 .angle-right-button').on('click', function () {
+  removeWie3Animations();
+  initWasScrollify();
+  console.log("click right")
+  $('#fullpage').fullpage.moveTo('home',2);
+});
+
+$('#wie3 .angle-left-button').on('click', function () {
+  removeWie3Animations();
+  initWiesoScrollify();
+  console.log("click left")
+  $('#fullpage').fullpage.moveTo('home',0);
+});
+
+$("#wie3 .angle-down-container").click(function() {
+  removeWie3Animations();
+  $.scrollify.next();
+});
+
 $('#was1 .angle-right-button').on('click', function () {
   removeSection1Animations('#was1');
   initWerScrollify();
@@ -689,6 +786,12 @@ textFit($('#wieso1-question-container'),{
 });
 
 textFit($('#wieso1-buzzword'),{
+  widthOnly: true,
+  maxFontSize: 320
+  
+});
+
+textFit($('#wie1-buzzword'),{
   widthOnly: true,
   maxFontSize: 320
   
