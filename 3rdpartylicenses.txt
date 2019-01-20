@@ -402,15 +402,15 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+@angular/forms
+MIT
+
 @angular/animations
 MIT
 
 ngx-bootstrap/utils
 
 ngx-bootstrap/carousel
-
-@angular/forms
-MIT
 
 zone.js
 MIT
