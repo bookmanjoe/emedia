@@ -352,11 +352,11 @@ MIT
 @angular/router
 MIT
 
-@agm/core
+angular-font-awesome
 MIT
-The MIT License (MIT)
+The MIT License
 
-Copyright (c) 2017 Sebastian Müller
+Copyright (c) 2017
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -377,11 +377,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-angular-font-awesome
+@agm/core
 MIT
-The MIT License
+The MIT License (MIT)
 
-Copyright (c) 2017
+Copyright (c) 2017 Sebastian Müller
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
