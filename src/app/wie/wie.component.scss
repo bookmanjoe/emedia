@@ -1,31 +1,34 @@
-agm-map{
-    height: 20em;
-    width: 100%;
-}
 
 .wie2-italic-header{
     font-family: unit-light-italic;
-    font-size: 0.9em;
+    //font-size: 0.9em;
     color: black;
+    opacity: 1 !important;
 }
 
 .wie2-ultra-header{
     font-family: unit-ultra;
-    font-size: 1em;
+   // font-size: 1em;
     color: black;
+    opacity: 1 !important;
 }
 
 .wie2-text{
-    font-size: 0.9em;
+    //font-size: 0.9em;
     color: black;
     font-family: unit-light;
+    opacity: 1 !important;
 }
 
 #wie2-carousel{
     min-height: 40vh;
-    -moz-box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
-    -webkit-box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
-    box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
+}
+
+#wie2-carousel-bottom{
+    height: 10px;
+    -moz-box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
 }
 
 #wie2-placeholder{
@@ -83,38 +86,31 @@ box-shadow: 54px 50px 8px 1px rgba(0,0,0,0.6);
 padding: 3em;
 }
 
-#wie1-angle-down-container{
-    position: absolute;
-       color: white;
-       display: inline;
-       bottom:1em;
-       width:100%;
-       z-index:100;
+#wie2-header{
+ height: 4vh;
+ width:100%;
+ margin-left: 7px;
 }
 
-#wie1-angle-right-container{
-    position: absolute;
-       color: white;
-       display: inline;
-       bottom:1em;
-       width:10em;
+#wie2-subheader{
+    height: 5vh;
+    width:100%;
+    margin-left: 7px;
 }
 
+#wie2-details{
+    height: 14vh;
+    width:100%;
+    margin-left: 7px;
 
-/* #wie4-text-box:after{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 35%;
-    width: 0;
-    height: 0;
-    border: 54px solid transparent;
-    border-top-color: white; 
-    border-bottom: 0;
-    border-left: 0;
-    margin-left: -27px;
-    margin-bottom: -54px;
-    -webkit-box-shadow: 54px 50px 8px 1px rgba(0,0,0,0.6);
-    -moz-box-shadow: 54px 50px 8px 1px rgba(0,0,0,0.6);
-    box-shadow: 54px 50px 8px 1px rgba(0,0,0,0.6);
-} */
+}
+
+#wie3-red-header-wrapper{
+    height:30vh;
+}
+
+@media screen and (max-width: 768px) {
+    .wie3-ultra-header{
+        font-size: 3em;
+    }
+}

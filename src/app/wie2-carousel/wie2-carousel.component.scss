@@ -1,6 +1,5 @@
 #wie2-carousel-wrapper {
-    margin-top: 1em;
-
+    margin-top: 6vh;
 }
 
 .carousel-header-text{
@@ -14,12 +13,66 @@
 
 .carousel-detail-text{
     color: black;
-    font-size: 0.9em;
     font-family: unit-black;
     line-height: 1em;
     line-height: 1.6em;
 }
 
-.carousel-item{
-    margin: 1em;
+.wie2-carousel-item{
+
+}
+
+/* #wie2-carousel-right-arrow{
+      height:8em;
+    width:100%;
+border-style: solid;
+border-width: 4em 0 4em 1em;
+border-color: transparent transparent transparent #ff0000;
+margin-top: 12vh;
+} */
+
+/* #wie2-carousel-left-arrow{
+    height:8em;
+    width:100%;
+    border-style: solid;
+    border-width: 4em 1em 4em 0em;
+    border-color: transparent #ff0000 transparent transparent;
+    margin-top: 12vh;
+} */
+
+@media screen and (max-width: 768px) {
+    .carousel-icon {
+        margin-right: -3em;
+    }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+
+    .carousel-detail-text {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+
+    .carousel-detail-text {
+        font-size: 1.4em;
+    }
+}
+@media screen and (max-width:420px) {
+    .carousel-icon {
+        margin-right: -3em;
+    }
+    .carousel-detail-text{
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .carousel-icon {
+        margin-right: -3em;
+    }
+    .carousel-detail-text{
+        font-size: 1.1em;
+    }
 }

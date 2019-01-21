@@ -37,7 +37,6 @@ body {
 
 p {
     font-family: 'unit-black';
-    font-size: 1.1em;
     font-weight: 300;
     line-height: 1.2em;
     color: #999;
@@ -45,6 +44,40 @@ p {
 
 h3 {
     font-family: 'unit-bold';
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: 'unit-light';
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-family: 'unit-light';
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    font-family: 'unit-light';
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    font-family: 'unit-light';
+  }
+
+  .text-light { 
+    font-family: 'unit-light';
+  }
+
+  .text-red { 
+    color: red !important;
+  }
+
+  form .required::after {
+
+    color: #db0142;
+    content: "*";
+    display: block;
+    height: 5px;
+    left: 5px;
+    position: absolute;
+    top: 3px;
+    width: 5px;
+
 }
 
 a,
@@ -59,6 +92,30 @@ a:focus {
     display: flex;
     width: 100%;
     align-items: stretch;
+}
+
+.top-placeholder-50 {
+    height: 50vh;
+}
+
+.top-placeholder-45 {
+    height: 45vh;
+}
+
+.top-placeholder-40 {
+    height: 40vh;
+}
+
+.top-placeholder-35 {
+    height: 35vh;
+}
+
+.top-placeholder-30 {
+    height: 30vh;
+}
+
+.top-placeholder-25 {
+    height: 25vh;
 }
 
 .top-placeholder-20 {
@@ -95,13 +152,27 @@ a:focus {
     margin-left: 0px;
 }
 
-#sidebarCollapse {
+.sidebarCollapse {
     display: block;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    
 }
 
-#sidebarCollapse.active {
+.sidebarCollapse:hover {
+    font-size: 1.4em;
+}
+
+
+
+
+.sidebarCollapse.active {
     display: none;
 }
+
+
 
 .sidebar-close {
     color: black;
@@ -110,27 +181,36 @@ a:focus {
 }
 
 #sidebar .sidebar-header {
-    padding: 20px;
+    padding: 1vh;
     color: #ff0037;
     background: #fff;
 }
 
 #sidebar ul.components {
-    padding: 10px 0;
+    padding: 1vh 0;
+    margin-bottom: 0.2vh;
 }
 
-#sidebar ul p {
-    font-size: 1em;
+#sidebar ul p a {
+    font-size: 2vh;
     color: rgb(15, 15, 15);
     padding: 0px 0px 0px 10px;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.4vh;
+    padding-right: 5px;
+}
+
+#sidebar ul p a:hover {
+    color: #fff;
+    background: #ff0037;
+    
 }
 
 #sidebar ul li a {
-    padding: 4px 0px 4px 20px;
-    font-size: 0.8em;
-    display: block;
-    font-family: unit-light;
+padding: 4px 0px 4px 20px;
+font-size: 1.5vh;
+display: block;
+font-family: unit-light;
+line-height: 1.6vh;
 }
 
 #sidebar ul li a:hover {
@@ -153,147 +233,379 @@ ul ul a {
 #sidebar hr {
     margin-left: 5px;
     margin-right: 5px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
+.redButton{
+    background-color:red;
+    border-color:red;
+}
+
+.redButton:hover{
+    background-color:#a00000;
+    border-color: #a00000;
+}
+
+.enormediaLogoHover {
+    width: 160px;
+}
+
 #enormediaLogo {
-    content: url("./assets/img/logos/enormedia.png");
+    content: url("./assets/img/logos/enormedia-kontur.png");
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 160px;
-    margin-top: 16px;
+    width: 8em;
+    opacity: 1 !important;
+    position:absolute;
+    top: 24px;
+    z-index:10000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.facebookIcon {
+    content: url("./assets/img/logos/facebook.png");
+    display: block;
+    position:absolute;
+    opacity: 1 !important;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    top: 16px;
+    right: 3vw;
+    width: 1vw;
+    z-index: 10000;
+}
+
+.xingIcon {
+    content: url("./assets/img/logos/xing.png");
+    display: block;
+    position:absolute;
+    opacity: 1 !important;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    top: 16px;
+    right: 5vw;
+    width: 2vw;
+    z-index: 10000;
+}
+
+#navContainer:hover #navbarTop{
+    height: 70px !important;
+    opacity: 1 !important;
+    background-color: rgba(255, 255, 255, 1) !important; 
+}
+
+#navContainer:hover #enormediaLogo{
+    top:40px !important;
+    content: url("./assets/img/logos/enormedia-kontur.png") !important;
+    width:10em !important;
+}
+
+.logoHidden{
+    content: url("./assets/img/logos/enormedia.png") !important;
+    top:20px !important;
+    width:6em !important;
+}
+
+#navContainer:hover .xingIcon{
+    width:3vw !important;
+    right: 6vw;
+}
+
+#navContainer:hover .facebookIcon{
+    width:1.5vw !important;
 }
 
 #navbarTop {
-    height: 80px;
+    height: 50px;
     z-index: 9999;
-    position: relative;
+    position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
+.navbarHidden{
+    background-color: rgba(255, 255, 255, 0.5) !important; 
+}
+
+
+
+
 #wieso1 {
-    background: url('./assets/img/wieso/wieso-1.png') top left no-repeat;
-    height: 100vh ;
-    width: auto;
+    background: url('./assets/img/background/redBackground.jpg') top left no-repeat;
+    height: 100vh;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
 }
 
 #wieso2 {
-    background: url('./assets/img/background/grayBackground.png') top left no-repeat;
-    height: 100vh ;
+    background: url('./assets/img/background/light_grey.jpg') top left no-repeat;
+    height: 100vh;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
     position:relative;
 }
 
 #wieso3 {
-    background: url('./assets/img/wieso/wieso-3.png') top left no-repeat;
-    height: 100vh ;
+    background: url('./assets/img/background/light_grey.jpg') top left no-repeat;
+    height: 100vh;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
     position:relative;
 }
 
 #wieso4 {
-    background: url('./assets/img/background/redBackground.png') top left no-repeat;
-    height: 20vh;
+    background: url('./assets/img/background/redBackground.jpg') top left no-repeat;
+    height: 30vh;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
     position:relative;
 }
 
+#wie5 {
+    background: url('./assets/img/background/redBackground.jpg') top left no-repeat;
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position:relative;
+}
+
+#was8 {
+    background: url('./assets/img/background/redBackground.jpg') top left no-repeat;
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position:relative;
+}
+
+#wer4 {
+    background: url('./assets/img/background/redBackground.jpg') top left no-repeat;
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position:relative;
+}
+
+
+.map{
+
+}
+
 #wie1 {
-    background: url('./assets/img/background/redBackground.png') top left no-repeat;
+    background: url('./assets/img/background/redBackground.jpg') top left no-repeat;
     height: 100vh;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
 }
 
 #wie1-mann-background {
-    background: url('./assets/img/wie/wie1-mann.png') top left no-repeat;
+    background: url('./assets/img/background/einfach2.png') top right no-repeat;
     height: 90vh;
-    background-size: cover;
-    /* <------ */
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 20vw bottom;
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 50%;
-    opacity: 0.4;
+    width: 40vw;
+    opacity: 0.9;
+}
+
+#wie1-frau-background {
+    background: url('./assets/img/background/einfach1.png') top left no-repeat;
+    height: 90vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: -5vw bottom;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40vw;
+    opacity: 0.9;
+}
+
+#wie1-mann-background-sm {
+    background: url('./assets/img/background/einfach2.png') top right no-repeat;
+    height: 40vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    position: absolute;
+    width: 30vw;
+    top: 4vh;
+    right: 6vw;
+    opacity: 0.9;
+}
+
+#wie1-frau-background-sm{
+    background: url('./assets/img/background/einfach1.png') top left no-repeat;
+    height:  40vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    position: absolute;
+    top: 4vh;
+    left: 6vw;
+    width: 30vw;
+    opacity: 0.9;
+}
+
+#wer1-team-background-sm{
+    background: url('./assets/img/background/jederzeit.png') top left no-repeat;
+    height:  20vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    position: absolute;
+    top: 14vh;
+    left: 5vw;
+    width: 90vw;
+    opacity: 0.9;
+}
+
+#was1-hand-links-background {
+    background: url('./assets/img/background/alles2.png') top right no-repeat;
+    height: 70vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    position: absolute;
+    bottom: 0;
+    right: 10vw;
+    width: 40vw;
+    opacity: 0.9;
+}
+
+#was1-hand-rechts-background {
+    background: url('./assets/img/background/alles1.png') top left no-repeat;
+    height: 70vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    position: absolute;
+    bottom: 0;
+    left: 10vw;
+    width: 42vw;
+    opacity: 0.9;
+}
+
+#wer1-team-background {
+    background: url('./assets/img/background/jederzeit.png') top left no-repeat;
+    height: 40vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    position: absolute;
+    bottom: 0vh;
+    left: 10vw;
+    width: 80vw;
+    opacity: 0.9;
+}
+
+#wieso1-mann-background {
+    background: url('./assets/img/background/nichts.png') top left no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -20vh 0vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60vw;
+    opacity: 0.9;
+}
+
+#wieso1-mann-background-sm{
+    background: url('./assets/img/background/nichts.png') top left no-repeat;
+    height: 40vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    position: absolute;
+    top: 7vh;
+    left: 5vw;
+    width: 90vw;
+    opacity: 0.9;
 }
 
 #wie2 {
-    background: url('./assets/img/background/grayBackground.png') top left no-repeat;
-    height: 100vh;
+    background: url('./assets/img/background/light_grey.jpg') top left no-repeat;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
+    position:relative;
+    height: 100vh;
 }
 
 #wie2-text-wrapper {
-    background: url('./assets/img/wie/wie2-text.png') top left no-repeat;
+    background: url('./assets/img/wie/wie2-text-opacity.png') top left no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    padding: 5em;
+    padding: 4em 0em;
     -moz-box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
     box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
+    height:30vh;
 }
 
 #wie3 {
     background: url('./assets/img/wie/wie-3.png') top left no-repeat;
     height: 100vh;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 30% center;
+    position:relative;
 }
 
 #wie4 {
     background: url('./assets/img/wie/wie-4.png') top left no-repeat;
     height: 100vh;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
+    position:relative;
 }
 
 #regiopinion-logo {
     margin-top: 1em;
     height: 3em;
-    background: url('./assets/img/logos/regiopinion.png') top left no-repeat;
+    background: url('./assets/img/logos/umfrageheld.png') top left no-repeat;
     background-size: auto 3em;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 #was1 {
-    background: url('./assets/img/background/redBackground.png') top left no-repeat;
+    background: url('./assets/img/background/redBackground.jpg') top left no-repeat;
     height: 100vh;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
@@ -303,95 +615,85 @@ ul ul a {
     background: url('./assets/img/was/was-2.png') top left no-repeat;
     height: 100vh;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
+    position: relative;
 }
 
 #was3 {
-    background: url('./assets/img/was/was-3-verteilung.png') top left no-repeat;
+    background: url('./assets/img/was/was-3-verteilung.jpg') top left no-repeat;
     height: 100vh;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
+    position: relative;
 }
 
 #was4 {
-    background: url('./assets/img/was/was-4.png') top left no-repeat;
+    background: url('./assets/img/was/print.jpg') top left no-repeat;
     height: 100vh;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
+    position: relative;
 }
 
 #was5 {
-    background: url('./assets/img/was/was-5.png') top left no-repeat;
+    background: url('./assets/img/was/plakat.jpg') top left no-repeat;
     height: 0;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
+    position: relative;
 }
 
 #was6 {
-    background: url('./assets/img/was/was-6.png') top left no-repeat;
+    background: url('./assets/img/was/online.jpg') top left no-repeat;
     height: 100vh;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
+    position: relative;
 }
 
 #was7 {
-    background: url('./assets/img/was/was-7.png') top left no-repeat;
+    background: url('./assets/img/was/radio.jpg') top left no-repeat;
     height: 100vh;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
+    position: relative;
 }
 
 #wer1 {
-    background: url('./assets/img/wer/wer-1.png') top left no-repeat;
+    background: url('./assets/img/background/redBackground.jpg') top left no-repeat;
     height: 100vh;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
 }
 
 #wer2 {
-    background: url('./assets/img/background/grayBackground.png') top left no-repeat;
+    background: url('./assets/img/background/light_grey.jpg') top left no-repeat;
     height: 100vh;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
+    position: relative;
 }
 
 #wer3 {
-    background: url('./assets/img/background/grayBackground.png') top left no-repeat;
+    background: url('./assets/img/background/light_grey.jpg') top left no-repeat;
     height: 100vh;
     background-size: cover;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
-}
-
-#wer3 {
-    background: url('./assets/img/background/grayBackground.png') top left no-repeat;
-    height: 100vh;
-    background-size: cover;
-    /* <------ */
-    background-repeat: no-repeat;
-    background-position: center center;
+    position: relative;
 }
 
 /* #wer4 {
-    background: url('./assets/img/background/redBackground.png') top left no-repeat;
+    background: url('./assets/img/background/redBackground.jpg') top left no-repeat;
     height:20vh;
     background-size:     cover;                 
     background-repeat:   no-repeat;
@@ -399,11 +701,13 @@ ul ul a {
 } */
 
 .sub-navbar {
-    position: relative;
+    position: absolute;
     z-index: 8999;
     color: white;
     padding: 1em;
     margin-left: -1em;
+    top: 50px;
+left: 0px;
 }
 
 .sub-navbar a.active {
@@ -432,7 +736,10 @@ ul ul a {
 
 .sub-navbar-divider {
     margin-left: 0px;
-    width: 200px;
+    width: 240px;
+    border: 0; 
+        height: 1px; 
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
 }
 
 #fp-nav {
@@ -445,7 +752,7 @@ ul ul a {
     right: 1em;
     color: white;
     display: inline;
-    top: 50vh;
+    bottom: 50vh;
     text-align: right;
 }
 
@@ -475,7 +782,7 @@ ul ul a {
     position: absolute;
     color: white;
     display: inline;
-    top: 50vh;
+    bottom: 50vh;
     left: 1em;
     width: 8em;
 }
@@ -515,6 +822,15 @@ ul ul a {
     font-family: unit-light-italic;
     font-size: 0.8em;
     margin-top: 1em;
+    text-align: center;
+}
+
+.angle-down-text-container{
+    width:30vw;
+}
+
+.angle-down-arrow-container{
+    width:30vw;
 }
 
 #wieso2-text-wrapper {
@@ -531,9 +847,36 @@ ul ul a {
 #wer2-mitarbeiter-wrapper {
     background: url("./assets/img/wieso/em.svg") top left no-repeat;
     background-size: contain;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+.wie2-carousel-right-arrow{
+    background: url("./assets/img/background/right-arrow.png") top left no-repeat;
+    background-size: 6vh;
+    background-repeat: no-repeat;
+    background-position: left 50%;
+}
+
+.wie2-carousel-left-arrow{
+    background: url("./assets/img/background/left-arrow.png") top left no-repeat;
+    background-size: 6vh;
+    background-repeat: no-repeat;
+    background-position: right 50%;
+}
+
+.wer2-carousel-right-arrow{
+    background: url("./assets/img/background/right-arrow.png") top left no-repeat;
+    background-size: 6vh;
+    background-repeat: no-repeat;
+    background-position: left 50%;
+}
+
+.wer2-carousel-left-arrow{
+    background: url("./assets/img/background/left-arrow.png") top left no-repeat;
+    background-size: 6vh;
+    background-repeat: no-repeat;
+    background-position: right 50%;
 }
 
 #item-mitarbeiter-kolja {
@@ -550,6 +893,7 @@ ul ul a {
     color: white;
     //line-height: 0.4em;
     font-family: unit-light;
+    text-align: center;
 }
 
 .text-buzzword {
@@ -564,6 +908,10 @@ ul ul a {
     font-size: 0.9em;
     color: white;
     font-family: unit-light;
+}
+
+.text-underline{
+    text-decoration: underline;
 }
 
 .text-black-header {
@@ -595,11 +943,11 @@ hr.wie2-content-text-divider {
 }
 
 .footer-navbar {
-    position: relative;
+    position: absolute;
     z-index: 8999;
-    color: red;
-    bottom: 5em;
-    left: 2em;
+    color: white;
+    bottom: 2vh;
+    left: 2vw;
 }
 
 .footer-navbar a.active {
@@ -611,12 +959,22 @@ hr.wie2-content-text-divider {
     filter: alpha(opacity=100);
 }
 
+.footer-navbar a:hover {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1.1em;
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+    z-index: 8999;
+}
+
 .footer-navbar a {
     margin-top: 10px;
     padding: 10px;
-    opacity: 0.7;
+    opacity: 0.9;
     z-index: 8999;
-    filter: alpha(opacity=70);
+    filter: alpha(opacity=90);
+    transition: all 500ms;
 }
 
 .subwayLogo {
@@ -706,30 +1064,190 @@ hr.wie2-content-text-divider {
 }
 
 .navigation-footer {
-    background-color: black;
-    opacity: 0.4;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.29) 49%, rgba(0,0,0,0.6) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.29) 49%,rgba(0,0,0,0.6) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.29) 49%,rgba(0,0,0,0.6) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=0 ); /* IE6-9 */
     height: 10vh;
     bottom: 0;
     position: absolute;
     display: none;
     margin-left: auto;
+    z-index: 100;
 }
 
-#wieso1-buzzword {
-
+.contact-container{
+    top: 2vh;
+    left: 50vw;
+    position: absolute;
 }
 
 .angle-down-container{
     position: absolute;
        color: white;
        display: inline;
-       bottom: 2vh;
-       width: 100%;
-       z-index:100;
+       bottom: 0vh;
+       margin-left:auto;
+       margin-right:auto;
+       width: 30vw;
+       left: 35vw;
+       z-index:200;
 }
 
-.black{
+#contact-form-wrapper{
+    background: url('./assets/img/background/light_grey.jpg') top left no-repeat;
+        height: 60vh !important;
+        width: 60vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+}
+
+.text-black{
     color:black !important;
+}
+
+.white{
+    color:white !important;
+}
+
+.beratung-icon{
+    background: url('./assets/img/wie/Beratung.png') top left no-repeat;
+}
+
+.analyse-icon{
+    background: url('./assets/img/wie/Analyse.png') top left no-repeat;
+}
+
+.controlling-icon{
+    background: url('./assets/img/wie/Controlling.png') top left no-repeat;
+}
+
+.einkauf-icon{
+    background: url('./assets/img/wie/Einkauf.png') top left no-repeat;
+}
+
+.planung-icon{
+    background: url('./assets/img/wie/Planung.png') top left no-repeat;
+}
+.carousel-icon{
+    height: 2em !important;
+    width: 2em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    display: inline-block;
+    margin-right:-25%;
+    border: none;
+}
+
+.skill-list-icon-img{
+    height: 2em !important;
+    width: 2em !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    background-position: right center;
+    display: inline-block;
+}
+
+.mailing-icon{
+    background: url('./assets/img/was/VER_Mailing.png') no-repeat;
+} 
+
+.prospekt-icon{
+    background: url('./assets/img/was/VER_Prosp.png') no-repeat;
+} 
+
+.flyer-icon{
+    background: url('./assets/img/was/VER_Flyer.png') no-repeat;
+} 
+
+.beilagen-icon{
+    background: url('./assets/img/was/VER_Beilagen.png') no-repeat;
+} 
+
+.strategie-icon{
+    background: url('./assets/img/was/AZ_Strat.png') no-repeat;
+} 
+
+.ziel-icon{
+    background: url('./assets/img/was/AZ_Ziel.png') top left no-repeat;
+} 
+
+.buchung-icon{
+    background: url('./assets/img/was/AZ_Buch.png') top left no-repeat;
+} 
+
+.druck-icon{
+    background: url('./assets/img/was/AZ_Druck.png') top left no-repeat;
+} 
+
+.kosten-icon{
+    background: url('./assets/img/was/AZ_Kosten.png') top left no-repeat;
+} 
+
+.offset-druck-icon{
+    background: url('./assets/img/was/DRU_Offset.png') top left no-repeat;
+}
+
+.digital-druck-icon{
+    background: url('./assets/img/was/DRU_Digital.png') top left no-repeat;
+}
+
+.hochdruck-icon{
+    background: url('./assets/img/was/DRU_Hoch.png') top left no-repeat;
+}
+
+.tiefdruck-icon{
+    background: url('./assets/img/was/DRU_Tief.png') top left no-repeat;
+}
+
+.siebdruck-icon{
+    background: url('./assets/img/was/DRU_Sieb.png') top left no-repeat;
+}
+
+.city-icon{
+    background: url('./assets/img/was/PLA_City.png') top left no-repeat;
+}
+
+.gf-icon{
+    background: url('./assets/img/was/PLA_GF.png') top left no-repeat;
+}
+
+.litfass-icon{
+    background: url('./assets/img/was/PLA_Litfass.png') top left no-repeat;
+}
+
+.tafel-icon{
+    background: url('./assets/img/was/PLA_Tafel.png') top left no-repeat;
+}
+
+.wechsel-icon{
+    background: url('./assets/img/was/PLA_Wechsel.png') top left no-repeat;
+}
+
+.kampa-icon{
+    background: url('./assets/img/was/DIG_Kampa.png') top left no-repeat;
+}
+
+.recht-icon{
+    background: url('./assets/img/was/DIG_Recht.png') top left no-repeat;
+}
+
+.sem-icon{
+    background: url('./assets/img/was/DIG_SEM.png') top left no-repeat;
+}
+
+.seo-icon{
+    background: url('./assets/img/was/DIG_SEO.png') top left no-repeat;
+}
+
+.radio-icon{
+    background: url('./assets/img/was/Radio.png') top left no-repeat;
+}
+
+.fernseh-icon{
+    background: url('./assets/img/was/TV.png') top left no-repeat;
 }
 
 @-webkit-keyframes object_one {
@@ -771,34 +1289,152 @@ hr.wie2-content-text-divider {
     }
 }
 
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 11px;
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    #wieso1-mann-background{
+        background-position: -20vw 10vh;
     }
+    
+    #wie1-mann-background {
+        background-position: 15vw bottom;
+    }
+    
+    #wie1-frau-background {
+        background-position: -12vw bottom;
+    }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    body {
+        font-size: 14px;
+    }
+
+    .carousel-detail-text {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    body {
+        font-size: 12px;
+    }
+
+    .carousel-detail-text {
+        font-size: 1.4em;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    .sidebarCollapse {
+        font-size: 1.8em
+        
+    }
+
+    .sidebarCollapse:hover {
+        font-size: 2em
+        
+    }
+
+
     #sidebar.active {
         margin-left: 0;
     }
     #wieso1-footer {
         display: none;
     }
-    #wieso1 {
-        background: url('./assets/img/background/redBackground.png') top left no-repeat;
-        height: 100vh !important;
-        width: auto;
-        background-size: cover;
-        /* <------ */
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
+
     .navigation-footer {
         display: block;
     }
     .angle-left-container {
-        top: 91vh;
+        bottom: 3vh !important;
         z-index: 200;
     }
+
     .angle-right-container {
-        top: 91vh;
+        bottom: 3vh !important;
         z-index: 200;
+    }
+
+    .facebookIcon {
+        right: 2em;
+        width: 1.5em;
+    }
+    
+    .xingIcon {
+        right: 5em;
+        width: 3em;
+    }
+
+    #navContainer:hover .xingIcon{
+        width: 5em !important;
+        right: 6em;
+    }
+    
+    #navContainer:hover .facebookIcon{
+        width: 2.5em !important;
+        right: 2em;
     }
 }
+@media screen and (max-width: 560px) {
+
+    .facebookIcon {
+        right: 2em;
+        width: 1.5em;
+    }
+    
+    .xingIcon {
+        right: 5em;
+        width: 3em;
+    }
+
+    #navContainer:hover .xingIcon{
+        width: 5em !important;
+        right: 6em;
+    }
+    
+    #navContainer:hover .facebookIcon{
+        width: 2.5em !important;
+        right: 2em;
+    }
+
+    #was1-hand-links-background {
+        right: 0vw;
+    }
+
+    body {
+        font-size: 10px;
+    }
+    
+    #was1-hand-rechts-background {
+       left:0vw;
+    }
+
+    #was2{
+        background-position: left bottom;
+    }
+
+    #was3{
+        background-position: 80% center;
+    }
+
+    #was4{
+        background-position: right top;
+    }
+
+    #was5{
+        background-position: 30% top;
+    }
+
+    #was6{
+        background-position: 20% top;
+    }
+    #was7{
+        background-position: 70% bottom;
+    }
+    .angle-right-container {
+        bottom: 3vh !important;
+        z-index: 200;
+        position: absolute;
+    }
+}
+

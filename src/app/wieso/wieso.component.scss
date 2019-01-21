@@ -1,16 +1,9 @@
-agm-map{
-    height: 20em;
-    width: 100%;
-}
 
 #wieso1-text {
     color: white;
     font-family: unit-light-italic;
     
    }
-#wieso1-angle-down-container{
-
-}
 
 #wieso2-haushalt {
     height: 6vh;
@@ -66,9 +59,12 @@ agm-map{
     opacity: 0.8;
 }
 
+#wieso2-umsatz-number{
+    height: 6vh;
+}
 
 #wieso2-umsatz-label{
-
+    height: 6vh;
 }
 #wieso2-partner-home-number{
     height:12vh

@@ -17,13 +17,13 @@ export class Wer2CarouselComponent implements OnInit {
         arrows: false
       });
 
-      $('#wer2-carousel-right-arrow').click(function(){
+      $('.wer2-carousel-right-arrow').click(function(){
         $('.wer2-carousel').slick('slickNext');
         console.log("right carousel")
         
       });
 
-      $('#wer2-carousel-left-arrow').click(function(){
+      $('.wer2-carousel-left-arrow').click(function(){
         $('.wer2-carousel').slick('slickPrev');
         console.log("left carousel")
       });

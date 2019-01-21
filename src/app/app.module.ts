@@ -16,6 +16,8 @@ import {AgmCoreModule} from '@agm/core';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { Wie2CarouselComponent } from './wie2-carousel/wie2-carousel.component';
 import { Wer2CarouselComponent } from './wer2-carousel/wer2-carousel.component';
+import { ContactModalComponent } from './contact-modal/contact-modal.component';
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { Wer2CarouselComponent } from './wer2-carousel/wer2-carousel.component';
     CustomerBoxComponent,
     MapComponent,
     Wie2CarouselComponent,
-    Wer2CarouselComponent
+    Wer2CarouselComponent,
+    ContactModalComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { Wer2CarouselComponent } from './wer2-carousel/wer2-carousel.component';
     AgmCoreModule.forRoot({
       apiKey:""
     }),
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

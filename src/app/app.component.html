@@ -1,4 +1,6 @@
-<!-- <div id="loading">
+<!-- LOADING SCREEN 
+  
+  <div id="loading">
     <div id="loading-center">
       
     <div id="loading-center-absolute">
@@ -14,93 +16,276 @@
     </div>
     </div> -->
 
- <div class="wrapper">
-    
-    <!-- Sidebar -->
-    <nav id="sidebar">
-        <div class="sidebar-close">
-            <fa id="sidebarClose" size="2x" name="fas fa-times"></fa>
-        </div>
-      <div class="sidebar-header">
-        <h3 class=sidebar-header-label>MENÜ</h3>       
+<div class="wrapper">
+
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <div class="sidebar-close">
+      <fa id="sidebarClose" size="2x" name="fas fa-times"></fa>
     </div>
-    <hr/>
+    <div class="sidebar-header">
+      <h3 class=sidebar-header-label>MENÜ</h3>
+    </div>
+    <hr />
     <ul class="list-unstyled components">
-      <p><a id="sidebar-wieso-1"> WIESO ENORMEDIA?</a></p>
+      <p><a href="#" id="sidebar-wieso-1"> WIESO ENORMEDIA?</a></p>
       <li>
-        <a id="sidebar-wieso-2">ZAHLEN</a>
+        <a href="#" id="sidebar-wieso-2">ZAHLEN</a>
       </li>
       <li>
-        <a id="sidebar-wieso-3">KUNDEN</a>
-    </li>
+        <a href="#" id="sidebar-wieso-3">KUNDEN</a>
+      </li>
     </ul>
-   
+
     <ul class="list-unstyled components">
-        <p><a id="sidebar-wie-1"> WIE ARBEITET ENORMEDIA?</a></p>
-        <li>
-          <a id="sidebar-wie-2">PROZESS</a>
-        </li>
-        <li>
-          <a id="sidebar-wie-3">FEINROT</a>
+      <p><a href="#" id="sidebar-wie-1"> WIE ARBEITET ENORMEDIA?</a></p>
+      <li>
+        <a href="#" id="sidebar-wie-2">PROZESS</a>
       </li>
       <li>
-        <a id="sidebar-wie-4">REGIOPINION</a>
+        <a href="#" id="sidebar-wie-3">FEINROT</a>
       </li>
-      </ul>
-      <ul class="list-unstyled components">
-          <p><a id="sidebar-was-1"> WAS LEISTET ENORMEDIA?</a></p>
-          <li>
-            <a id="sidebar-was-2">ANZEIGEN</a>
-          </li>
-          <li>
-            <a id="sidebar-was-3">VERTEILUNG</a>
-        </li>
-        <li>
-          <a id="sidebar-was-4">DRUCK & VERARBEITUNG</a>
-        </li>
-        <li>
-          <a id="sidebar-was-5">PLAKATE</a>
-        </li>
-        <li>
-          <a id="sidebar-was-6">DIGITAL</a>
-        </li>
-        <li>
-          <a id="sidebar-was-7">RUNDFUNK</a>
-        </li>
-        </ul>
-        <ul class="list-unstyled components">
-            <p><a id="sidebar-wer-1"> WER IST ENORMEDIA?</a></p>
-          <li>
-            <a id="sidebar-wer-2">ANSPRECHPARTNER</a>
-          </li>
-          <li>
-            <a id="sidebar-wer-3">JOBS</a>
-        </li>
-        </ul>
-      <hr/>
-      <ul class="list-unstyled components">
-        <li>
-          <a href="#">KONTAKT</a>
-        </li>
-        <li>
-          <a href="#">IMPRESSUM</a>
+      <li>
+        <a href="#" id="sidebar-wie-4">REGIOPINION</a>
       </li>
-        <li>
-          <a href="#">DATENSCHUTZ</a>
+    </ul>
+    <ul class="list-unstyled components">
+      <p><a href="#" id="sidebar-was-1"> WAS LEISTET ENORMEDIA?</a></p>
+      <li>
+        <a href="#" id="sidebar-was-2">ANZEIGEN</a>
       </li>
-      </ul>
-    </nav>
-
-    <div id="content">
-        
-        <div id="fullpage">            
-            <div class="section fp-auto-height">
-                <div class="slide" data-anchor="wieso"> <app-wieso></app-wieso> </div>
-                <div class="slide" data-anchor="wie"> <app-wie></app-wie></div>
-                <div class="slide" data-anchor="was"> <app-was></app-was></div>
-                <div class="slide" data-anchor="wer"> <app-wer></app-wer></div>
-            </div> 
-        </div>               
+      <li>
+        <a href="#" id="sidebar-was-3">VERTEILUNG</a>
+      </li>
+      <li>
+        <a href="#" id="sidebar-was-4">DRUCK & VERARBEITUNG</a>
+      </li>
+      <li>
+        <a href="#" id="sidebar-was-5">PLAKATE</a>
+      </li>
+      <li>
+        <a href="#" id="sidebar-was-6">DIGITAL</a>
+      </li>
+      <li>
+        <a href="#" id="sidebar-was-7">RUNDFUNK</a>
+      </li>
+    </ul>
+    <ul class="list-unstyled components">
+      <p><a href="#" id="sidebar-wer-1"> WER IST ENORMEDIA?</a></p>
+      <li>
+        <a href="#" id="sidebar-wer-2">ANSPRECHPARTNER</a>
+      </li>
+      <li>
+        <a href="#" id="sidebar-wer-3">JOBS</a>
+      </li>
+    </ul>
+    <hr />
+    <ul class="list-unstyled components">
+      <li>
+        <a href="#" data-toggle="modal" data-target="#contactModal">KONTAKT</a>
+      </li>
+      <li>
+        <a href="#" data-toggle="modal" data-target="#impressumModal">IMPRESSUM</a>
+      </li>
+      <li>
+        <a href="https://www.enormedia.de/datenschutz.php">DATENSCHUTZ</a>
+      </li>
+    </ul>
+  </nav>
+  <div id="content">
+    <div id="navContainer">
+      <div class="row justify-content-center">
+        <div id="enormediaLogo"></div>
+      </div>
+      <!--       <div class="row justify-content-center">
+        <div class="xingIcon"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="facebookIcon"></div>
+      </div> -->
+      <nav id="navbarTop" class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a href="#">
+            <fa class="sidebarCollapse" name="fas fa-bars"></fa>
+          </a>
         </div>
-    </div> 
+      </nav>
+    </div>
 
+    <!-- Contact-Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">KONTAKTFORMULAR:</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="contactForm">
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="anrede" id="anredeFrau" value="Frau">
+                      <label class="form-check-label text-black text-light" for="contactForm">
+                        Frau
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="anrede" id="anredeHerr" value="Herr">
+                      <label class="form-check-label text-black text-light" for="contactForm">
+                        Herr
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" name="vorname" id="contactVorname" placeholder="Vorname"
+                      required>
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" name="nachname" id="contactNachname" placeholder="Nachname"
+                      required>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" name="firma" id="contactFirma" placeholder="Firma">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col-9">
+                    <input type="text" class="form-control" name="strasse" id="contactStrasse" placeholder="Straße">
+                  </div>
+                  <div class="col-3">
+                    <input type="text" class="form-control" name="hausnummer" id="contactHausnummer" placeholder="Nr.">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" name="telefon" id="contactTelefon" placeholder="Telefon (geschäftlich)">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" name="mobil" id="contactMobil" placeholder="Mobilnummer">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" name="email" id="contactEmail" placeholder="Email-Adresse"
+                      required>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col">
+                    <textarea class="form-control" name="nachricht" id="contactNachricht" placeholder="Ihre Nachricht"
+                      rows="3" required></textarea>
+                  </div>
+
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="true" id="contactDatenschutz">
+                    <label class="form-check-label text-black text-light" for="contactDatenschutz">
+                      Ja, ich habe die <a href="https://www.enormedia.de/datenschutz.php"><span class="text-red text-underline">Datenschutzbestimmungen</span></a>
+                      gelesen und akzeptiere diese. <span class="text-red">*</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">SCHLIESSEN</button>
+            <button type="button" class="btn btn-primary redButton">ABSENDEN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="impressumModal" tabindex="-1" role="dialog" aria-labelledby="impressumModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">IMPRESSUM: </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class=col>
+                  <p class="text-light text-black">
+                  <font face="unit-bold"> enorMedia GmbH & Co. KG </font><br>
+                  Schloßplatz 11<br>
+                  26122 Oldenburg<br>
+                  <br><br>
+                  Tel.: <span class="text-red"><a title="Rufen Sie uns an: 0441 - 800 885 - 0!" href="tel:+494418008850">0441 - 800 885 - 0</a></span><br>
+                  Fax: 0441 - 800 885 - 28<br>
+                  <br><br>
+                  E-Mail: <a title="Kontakt-E-Mail-Adresse" href="mailto:info@enormedia.de"><u class="text-red">info@enormedia.de</u></a><br>
+                  <br><br>
+                  HRA 201 555 • AG Oldenburg
+                  USt-IdNr.: DE 262 827 249
+                </p>
+              </div>
+              <div class=col>
+                  <p class="text-light text-black">
+                  Komplementärin<br>
+                  enorMedia Verwaltungs GmbH<br>
+                  HRB 202 722 • AG Oldenburg<br>
+                  <br><br>
+                  Geschäftsführer: Jan Janssen<br>
+                  Inhaltlich Verantwortlicher: Jan Janssen<br>
+                  <br><br>
+                  <a href="https://www.enormedia.de/pdf/AGB_Druck.pdf"><u class="text-red">Allgemeine Geschäftsbedingungen (PDF, 55 KB)</u></a><br>
+                  <a href="https://www.enormedia.de/datenschutz.php"><u class="text-red">Datenschutzbestimmungen</u></a><br>
+                  </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">SCHLIESSEN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="fullpage">
+      <!-- fp-auto-height for enabling scrollify scrolling-->
+      <div class="section fp-auto-height">
+        <div class="slide" data-anchor="wieso">
+          <app-wieso></app-wieso>
+        </div>
+        <div class="slide" data-anchor="wie">
+          <app-wie></app-wie>
+        </div>
+        <div class="slide" data-anchor="was">
+          <app-was></app-was>
+        </div>
+        <div class="slide" data-anchor="wer">
+          <app-wer></app-wer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--   <app-contact-modal></app-contact-modal> -->
+</div>

@@ -9,14 +9,25 @@ export class Wie2CarouselComponent implements OnInit {
 
 
 
-
   constructor() { }
 
   ngOnInit() {
 
     $(document).ready(function(){
       $('.wie2-carousel').slick({
+        arrows: false,
+        adaptiveHeight: true,
+        centerMode: true,
+        centerPadding: '10px'
+      });
+
+      $('.wie2-carousel-right-arrow').click(function(){
+        $('.wie2-carousel').slick('slickNext');
         
+      });
+  
+      $('.wie2-carousel-left-arrow').click(function(){
+        $('.wie2-carousel').slick('slickPrev');
       });
     });
 
