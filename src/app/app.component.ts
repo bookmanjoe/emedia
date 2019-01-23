@@ -212,7 +212,7 @@ export class AppComponent {
     }
 
     function initWiesoScrollify() {
-      scrollWie = null;
+      /* scrollWie = null;
       scrollWas = null;
       scrollWer = null;
       scrollWieso = null;
@@ -271,11 +271,11 @@ export class AppComponent {
 
       addSection1Animations('#wieso1');
       $("#wieso1-mann-background").addClass('animated fadeInUp slow');
-      console.log($.scrollify);
+      console.log($.scrollify); */
     };
 
     function initWieScrollify() {
-
+/* 
       scrollWie = null;
       scrollWas = null;
       scrollWer = null;
@@ -334,7 +334,7 @@ export class AppComponent {
           fitTexts();
         },
         afterRender: function () { }
-      });
+      }); */
       addSection1Animations('#wie1');
       $("#wie1-frau-background").addClass('animated fadeInLeft slow');
       $("#wie1-mann-background").addClass('animated fadeInRight slow');
@@ -344,7 +344,7 @@ export class AppComponent {
 
     function initWasScrollify() {
 
-      scrollWie = null;
+      /* scrollWie = null;
       scrollWas = null;
       scrollWer = null;
       scrollWieso = null;
@@ -420,7 +420,7 @@ export class AppComponent {
           fitTexts();
         },
         afterRender: function () { }
-      });
+      }); */
       addSection1Animations('#was1');
       $("#was1-hand-rechts-background").addClass('animated fadeInLeft slow');
       $("#was1-hand-links-background").addClass('animated fadeInRight slow');
@@ -429,7 +429,7 @@ export class AppComponent {
 
     function initWerScrollify() {
 
-      scrollWie = null;
+      /* scrollWie = null;
       scrollWas = null;
       scrollWer = null;
       scrollWieso = null;
@@ -479,7 +479,7 @@ export class AppComponent {
           fitTexts();
         },
         afterRender: function () { }
-      });
+      }); */
       addSection1Animations('#wer1');
       $("#wer1-team-background").addClass('animated fadeInUp slow');
       console.log("initWer");
@@ -487,33 +487,33 @@ export class AppComponent {
     };
 
     function sidebarWieso(number) {
-      $.scrollify.instantMove('#1');
+     /*  $.scrollify.instantMove('#1'); */
       initWiesoScrollify();
       $('#fullpage').fullpage.moveTo('home', 0);
-      $.scrollify.instantMove('#'+number);
+     /*  $.scrollify.instantMove('#'+number); */
     }
 
     function sidebarWie(number) {
-      $.scrollify.instantMove('#1');
+     /*  $.scrollify.instantMove('#1'); */
       initWieScrollify();
       $('#fullpage').fullpage.moveTo('home', 1);
-      $.scrollify.instantMove('#'+number);
+     /*  $.scrollify.instantMove('#'+number); */
     }
 
     function sidebarWas(number) {
 
-      $.scrollify.instantMove('#1');
+      /* $.scrollify.instantMove('#1'); */
       initWasScrollify();
       $('#fullpage').fullpage.moveTo('home', 2);
-      $.scrollify.instantMove('#'+number);
+    /*   $.scrollify.instantMove('#'+number); */
     }
 
 
     function sidebarWer(number) {
-      $.scrollify.instantMove('#1');
+      /* $.scrollify.instantMove('#1'); */
       initWerScrollify();
       $('#fullpage').fullpage.moveTo('home', 3);
-      $.scrollify.instantMove('#'+number);
+      /* $.scrollify.instantMove('#'+number); */
     }
 
     function fitTexts() {
@@ -531,22 +531,26 @@ export class AppComponent {
         });
       }
 
-
+      if ($('#wie1-buzzword').is(':visible')) {
       textFit($('#wie1-buzzword'), {
         widthOnly: true,
         maxFontSize: 320
       });
-
+    }
+    if ($('#was1-buzzword').is(':visible')) {
       textFit($('#was1-buzzword'), {
         widthOnly: true,
         maxFontSize: 320
       });
 
+    }
+    if ($('#wer1-buzzword').is(':visible')) {
       textFit($('#wer1-buzzword'), {
         widthOnly: true,
         maxFontSize: 320
 
       });
+    }
 
 
       if ($('#wieso2-umsatz-number').is(':visible')) {
@@ -672,44 +676,71 @@ export class AppComponent {
       }
       
     }
-   
+
+    function moveToWieso(){
+      $('#fullpage').fullpage.moveTo('home',0);
+    }
+    
+    function initFullpage() {
+      var lastSection = false;
+      var moveToFirstSection = false;
+      $('#fullpage').fullpage({
+        licenseKey: 'EA26EC0D-13A84407-961F3DBD-832CEB96',
+        anchors: ['home', 'home2', 'home2'],
+        controlArrows: false,
+        scrollOverflow: true,
+        interlockedSlides: true,
+        bigSectionsDestination: 'top',
+        interlockedSlidesKey: '2A857F2B-2A4A41C7-AB505494-C1AC778A',
+        afterSlideLoad: function(section, origin, destination, direction){
+          console.log({
+            section: section,
+            origin: origin,
+            destination: destination,
+            direction: direction
+          });
+        },
+        onSlideLeave: function(section, origin, destination, direction){
+          console.log({
+            section: section,
+            origin: origin,
+            destination: destination,
+            direction: direction
+          });    
+          
+        },onLeave: function(origin, destination, direction){
+
+          if(lastSection == true && direction =='down'){
+            console.log("moveTo");
+			      return false;
+          } 
+          
+          console.log("onLeave:"+ lastSection);
+          }
+        , afterLoad: function(anchorLink, index){
+          
+          var activeSlide = $('#fullpage').fullpage.getActiveSlide().index;
+          if(activeSlide == 0 && index.index == 2){
+            lastSection = true;
+          } else if (activeSlide == 1 && index.index == 3){
+            lastSection = true;;
+          } else if (activeSlide == 2 && index.index == 6) {
+            lastSection = true;
+          } else if (activeSlide == 3 && index.index == 2) {
+            lastSection = true;
+          } else {
+            lastSection = false;
+          }
+
+          console.log("activeSlide: "+ activeSlide + " sectionIndex: " + index.index + " lastSection:" + lastSection);
+      }
+      });
+    }
+ 
 //-----------------------------JQuery-----------------------
     $(document).ready(function () {
-      fitTexts();
-      $('#fullpage').fullpage({
-        licenseKey: '',
-        anchors: ['home'],
-        controlArrows: false,
-        dragAndMove: false,
-        onSlideLeave: function(section, origin, destination, direction) {
-          if(destination.index == 0){
-            console.log("wieso slide");
-            initWiesoScrollify();
-            $.scrollify.instantMove("#1");
-            $.scrollify.update()
-          }
-          if(destination.index == 1){
-            console.log("wie slide");
-            initWieScrollify();
-            $.scrollify.instantMove("#1");
-            $.scrollify.update()
-          }
-          if(destination.index == 2){
-            console.log("was slide");
-            initWasScrollify();
-            $.scrollify.instantMove("#1");
-            $.scrollify.update()
-          }
-          if(destination.index == 3){
-            console.log("wer slide");
-            initWerScrollify();
-            $.scrollify.instantMove("#1");
-            $.scrollify.update()
-          }          
-        },
-      });
-      initWiesoScrollify();
-      $.scrollify.update()
+      fitTexts();     
+      initFullpage()
       //--------------------------Kontaktformular---------------------
 
 
@@ -804,11 +835,12 @@ export class AppComponent {
       $(".sub-navbar-wieso").click(function () {
         initWiesoScrollify();
         $('#fullpage').fullpage.moveTo('home', 0);
-
+ 
       });
       $(".sub-navbar-wie").click(function () {
         initWieScrollify();
         $('#fullpage').fullpage.moveTo('home', 1);
+
       });
       $(".sub-navbar-was").click(function () {
         initWasScrollify();
@@ -822,46 +854,40 @@ export class AppComponent {
 
       //--------------------------WIESO-NAVIGATION-ARROWS---------------------
       $("#wieso1 .angle-right-container").click(function () {
-        removeSection1Animations('#wieso1');
-        initWieScrollify();
-        $('#fullpage').fullpage.moveTo('home', 1);
+                $('#fullpage').fullpage.moveTo('home', 1);
+                removeSection1Animations('#wieso1');
       });
 
       $("#wieso1 .angle-down-container").click(function () {
+        $('#fullpage').fullpage.moveSectionDown();
         removeSection1Animations('#wieso1');
-        $.scrollify.next();
       });
 
       $("#wieso2 .angle-right-container").click(function () {
-
-        $.scrollify.instantMove("#1");
         $('#fullpage').fullpage.moveTo('home', 1);
-        initWieScrollify();
         removeWieso2Animations();
       });
 
       $("#wieso2 .angle-down-container").click(function () {
+        $('#fullpage').fullpage.moveSectionDown();
         removeWieso2Animations();
-        $.scrollify.next();
       });
 
       $("#wieso3 .angle-right-container").click(function () {
-        $.scrollify.instantMove("#1");
         removeWieso3Animations();
-        initWieScrollify();
         $('#fullpage').fullpage.moveTo('home', 1);
       });
 
       $("#wieso3 .angle-down-container").click(function () {
         removeWieso3Animations();
-        $.scrollify.next();
+        $('#fullpage').fullpage.moveSectionDown();
       });
 
       //--------------------------WIE-NAVIGATION-ARROWS---------------------
 
       $("#wie1 .angle-down-container").click(function () {
         removeSection1Animations('#wie1');
-        $.scrollify.next();
+        $('#fullpage').fullpage.moveSectionDown();
       });
 
       $('#wie1 .angle-right-button').on('click', function () {
@@ -878,32 +904,28 @@ export class AppComponent {
 
       $("#wie2 .angle-down-container").click(function () {
         removeWie2Animations();
-        $.scrollify.next();
+        $('#fullpage').fullpage.moveSectionDown();
       });
 
       $('#wie2 .angle-right-button').on('click', function () {
-        $.scrollify.instantMove("#1");
         removeWie2Animations();
         initWasScrollify();
         $('#fullpage').fullpage.moveTo('home', 2);
       });
 
       $('#wie2 .angle-left-button').on('click', function () {
-        $.scrollify.instantMove("#1");
         removeWie2Animations();
         initWiesoScrollify();
         $('#fullpage').fullpage.moveTo('home', 0);
       });
 
       $('#wie3 .angle-right-button').on('click', function () {
-        $.scrollify.instantMove("#1");
         removeWie3Animations();
         initWasScrollify();
         $('#fullpage').fullpage.moveTo('home', 2);
       });
 
       $('#wie3 .angle-left-button').on('click', function () {
-        $.scrollify.instantMove("#1");
         removeWie3Animations();
         initWiesoScrollify();
         $('#fullpage').fullpage.moveTo('home', 0);
@@ -911,18 +933,16 @@ export class AppComponent {
 
       $("#wie3 .angle-down-container").click(function () {
         removeWie3Animations();
-        $.scrollify.next();
+        $('#fullpage').fullpage.moveSectionDown();
       });
 
       $('#wie4 .angle-right-button').on('click', function () {
-        $.scrollify.instantMove("#1");
         removeWie4Animations();
         initWasScrollify();
         $('#fullpage').fullpage.moveTo('home', 2);
       });
 
       $('#wie4 .angle-left-button').on('click', function () {
-        $.scrollify.instantMove("#1");
         removeWie4Animations();
         initWiesoScrollify();
         $('#fullpage').fullpage.moveTo('home', 0);
@@ -931,32 +951,28 @@ export class AppComponent {
       //--------------------------WAS-NAVIGATION-ARROWS---------------------
       $("#was1 .angle-down-container").click(function () {
         removeSection1Animations('#was1');
-        $.scrollify.next();
+        $('#fullpage').fullpage.moveSectionDown();
       });
 
       $('#was1 .angle-right-button').on('click', function () {
         removeSection1Animations('#was1');
         initWerScrollify();
-        console.log("click right")
         $('#fullpage').fullpage.moveTo('home', 3);
       });
 
       $('#was1 .angle-left-button').on('click', function () {
         removeSection1Animations('#was1');
         initWieScrollify();
-        console.log("click left")
         $('#fullpage').fullpage.moveTo('home', 1);
       });
 
       $('#was2 .angle-right-button').on('click', function () {
-        $.scrollify.instantMove("#1");
         removeWasSectionAnimations('#was2');
         initWerScrollify();
         $('#fullpage').fullpage.moveTo('home', 3);
       });
 
       $('#was2 .angle-left-button').on('click', function () {
-        $.scrollify.instantMove("#1");
         removeWasSectionAnimations('#was2');
         initWieScrollify();
         $('#fullpage').fullpage.moveTo('home', 1);
@@ -964,18 +980,17 @@ export class AppComponent {
 
       $("#was2 .angle-down-container").click(function () {
         removeWasSectionAnimations('#was2');
-        $.scrollify.next();
+        $('#fullpage').fullpage.moveSectionDown();
       });
 
       $('#was3 .angle-right-button').on('click', function () {
-        $.scrollify.instantMove("#1");
         removeWasSectionAnimations('#was3');
         initWerScrollify();
         $('#fullpage').fullpage.moveTo('home', 3);
       });
 
       $('#was3 .angle-left-button').on('click', function () {
-        $.scrollify.instantMove("#1");
+      /*   $.scrollify.instantMove("#1"); */
         removeWasSectionAnimations('#was3');
         initWieScrollify();
         $('#fullpage').fullpage.moveTo('home', 1);
@@ -983,18 +998,16 @@ export class AppComponent {
 
       $("#was3 .angle-down-container").click(function () {
         removeWasSectionAnimations('#was3');
-        $.scrollify.next();
+        $('#fullpage').fullpage.moveSectionDown();
       });
 
       $('#was4 .angle-right-button').on('click', function () {
-        $.scrollify.instantMove("#1");
         removeWasSectionAnimations('#was4');
         initWerScrollify();
         $('#fullpage').fullpage.moveTo('home', 3);
       });
 
       $('#was4 .angle-left-button').on('click', function () {
-        $.scrollify.instantMove("#1");
         removeWasSectionAnimations('#was4');
         initWieScrollify();
         $('#fullpage').fullpage.moveTo('home', 1);
@@ -1002,18 +1015,16 @@ export class AppComponent {
 
       $("#was4 .angle-down-container").click(function () {
         removeWasSectionAnimations('#was4');
-        $.scrollify.next();
+        $('#fullpage').fullpage.moveSectionDown();
       });
 
       $('#was5 .angle-right-button').on('click', function () {
-        $.scrollify.instantMove("#1");
         removeWasSectionAnimations('#was5');
         initWerScrollify();
         $('#fullpage').fullpage.moveTo('home', 3);
       });
 
       $('#was5 .angle-left-button').on('click', function () {
-        $.scrollify.instantMove("#1");
         removeWasSectionAnimations('#was5');
         initWieScrollify();
         $('#fullpage').fullpage.moveTo('home', 1);
@@ -1021,18 +1032,16 @@ export class AppComponent {
 
       $("#was5 .angle-down-container").click(function () {
         removeWasSectionAnimations('#was5');
-        $.scrollify.next();
+        $('#fullpage').fullpage.moveSectionDown();
       });
 
       $('#was6 .angle-right-button').on('click', function () {
-        $.scrollify.instantMove("#1");
         removeWasSectionAnimations('#was6');
         initWerScrollify();
         $('#fullpage').fullpage.moveTo('home', 3);
       });
 
       $('#was6 .angle-left-button').on('click', function () {
-        $.scrollify.instantMove("#1");
         removeWasSectionAnimations('#was6');
         initWieScrollify();
         $('#fullpage').fullpage.moveTo('home', 1);
@@ -1040,18 +1049,16 @@ export class AppComponent {
 
       $("#was6 .angle-down-container").click(function () {
         removeWasSectionAnimations('#was6');
-        $.scrollify.next();
+        $('#fullpage').fullpage.moveSectionDown();
       });
 
       $('#was7 .angle-right-button').on('click', function () {
-        $.scrollify.instantMove("#1");
         removeWasSectionAnimations('#was7');
         initWerScrollify();
         $('#fullpage').fullpage.moveTo('home', 3);
       });
 
       $('#was7 .angle-left-button').on('click', function () {
-        $.scrollify.instantMove("#1");
         removeWasSectionAnimations('#was7');
         initWieScrollify();
         $('#fullpage').fullpage.moveTo('home', 1);
@@ -1059,12 +1066,10 @@ export class AppComponent {
 
       $("#wer1 .angle-down-container").click(function () {
         removeSection1Animations('#wer1');
-        $.scrollify.next();
+        $('#fullpage').fullpage.moveSectionDown();
       });
 
       $("#wer2 .angle-left-button").click(function () {
-        
-        $.scrollify.instantMove("#1");
         removeWer2Animations();
         initWasScrollify();
         $('#fullpage').fullpage.moveTo('home', 2);
@@ -1072,16 +1077,15 @@ export class AppComponent {
 
       $("#wer2 .angle-down-container").click(function () {
         removeWer2Animations();
-        $.scrollify.next();
+        $('#fullpage').fullpage.moveSectionDown();
       });
 
       $("#wer3 .angle-down-container").click(function () {
         removeWer3Animations();
-        $.scrollify.next();
+        $('#fullpage').fullpage.moveSectionDown();
       });
 
       $("#wer3 .angle-left-button").click(function () {
-        $.scrollify.instantMove("#1");
         removeWer3Animations();
         initWasScrollify();
         $('#fullpage').fullpage.moveTo('home', 2);
@@ -1089,36 +1093,31 @@ export class AppComponent {
 
       $('#was-list-anzeigen').on('click', function () {
         removeSection1Animations('#was1');
-        $.scrollify.move("#2");
+        $('#fullpage').fullpage.moveSectionDown();
       });
 
       $('#was-list-verteilung').on('click', function () {
         removeSection1Animations('#was1');
-        $.scrollify.move("#3");
       });
 
       $('#was-list-druck').on('click', function () {
         removeSection1Animations('#was1');
-        $.scrollify.move("#4");
       });
 
       $('#was-list-plakate').on('click', function () {
         removeSection1Animations('#was1');
-        $.scrollify.move("#5");
       });
 
       $('#was-list-digital').on('click', function () {
         removeSection1Animations('#was1');
-        $.scrollify.move("#6");
       });
 
       $('#was-list-rundfunk').on('click', function () {
         removeSection1Animations('#was1');
-        $.scrollify.move("#7");
       });
 
       $('#wer1 .angle-left-button').on('click', function () {
-        $.scrollify.instantMove("#1");
+      /*   $.scrollify.instantMove("#1"); */
         removeSection1Animations('#wer1');
         initWasScrollify();
         console.log("click left")
