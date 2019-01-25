@@ -100,7 +100,7 @@ a:focus {
     align-items: stretch;
 }
 
-.hide-section{
+.hide-section {
     display: none !important;
 }
 
@@ -347,8 +347,8 @@ ul ul a {
     background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.dummySlide{
-    height:100vh;
+.dummySlide {
+    height: 100vh;
     width: 100vw;
 }
 
@@ -363,7 +363,6 @@ ul ul a {
 
 #wieso2 {
     background: url('./assets/img/background/light_grey.jpg') top left no-repeat;
-    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -372,7 +371,6 @@ ul ul a {
 
 #wieso3 {
     background: url('./assets/img/background/light_grey.jpg') top left no-repeat;
-    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -390,7 +388,6 @@ ul ul a {
 
 #wie5 {
     background: url('./assets/img/background/redBackground.jpg') top left no-repeat;
-    height: 30vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -415,15 +412,8 @@ ul ul a {
     position: relative;
 }
 
-.map {}
-
-#wieso1-text {
-    font-size: 1.4em !important;
-}
-
 #wie1 {
     background: url('./assets/img/background/redBackground.jpg') top left no-repeat;
-    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -566,7 +556,7 @@ ul ul a {
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
-    height: 100vh;
+
 }
 
 #wie2-text-wrapper {
@@ -578,12 +568,11 @@ ul ul a {
     -moz-box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
     box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
-    height: 30vh;
 }
 
 #wie3 {
     background: url('./assets/img/wie/wie-3.png') top left no-repeat;
-    min-height: 100vh;
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 30% center;
@@ -592,7 +581,6 @@ ul ul a {
 
 #wie4 {
     background: url('./assets/img/wie/wie-4.png') top left no-repeat;
-    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -610,7 +598,6 @@ ul ul a {
 
 #was1 {
     background: url('./assets/img/background/redBackground.jpg') top left no-repeat;
-    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -619,7 +606,6 @@ ul ul a {
 
 #was2 {
     background: url('./assets/img/was/was-2.png') top left no-repeat;
-    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -628,7 +614,6 @@ ul ul a {
 
 #was3 {
     background: url('./assets/img/was/was-3-verteilung.jpg') top left no-repeat;
-    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -637,7 +622,6 @@ ul ul a {
 
 #was4 {
     background: url('./assets/img/was/print.jpg') top left no-repeat;
-    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -646,7 +630,6 @@ ul ul a {
 
 #was5 {
     background: url('./assets/img/was/plakat.jpg') top left no-repeat;
-    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -655,7 +638,6 @@ ul ul a {
 
 #was6 {
     background: url('./assets/img/was/online.jpg') top left no-repeat;
-    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -664,7 +646,6 @@ ul ul a {
 
 #was7 {
     background: url('./assets/img/was/radio.jpg') top left no-repeat;
-    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -673,7 +654,6 @@ ul ul a {
 
 #wer1 {
     background: url('./assets/img/background/redBackground.jpg') top left no-repeat;
-    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -682,7 +662,6 @@ ul ul a {
 
 #wer2 {
     background: url('./assets/img/background/light_grey.jpg') top left no-repeat;
-    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -691,7 +670,6 @@ ul ul a {
 
 #wer3 {
     background: url('./assets/img/background/light_grey.jpg') top left no-repeat;
-    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -831,14 +809,21 @@ ul ul a {
     width: 30vw;
 }
 
+#wieso2-logo {
+    position: absolute;
+    background: url("./assets/img/wieso/em.svg") top left no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 70vh;
+    top:15vh;
+    left: 20vw;
+    width: 60vw;
+}
+
 #wieso2-text-wrapper {
     color: black;
     font-family: unit-light-italic;
-    background: url("./assets/img/wieso/em.svg") top left no-repeat;
-    background-size: contain;
-    /* <------ */
-    background-repeat: no-repeat;
-    background-position: center center;
     height: 80%;
 }
 
@@ -887,7 +872,7 @@ ul ul a {
 }
 
 .text-question {
-    //font-size: 1.2em;
+    font-size: 1.4em;
     color: white; //line-height: 0.4em;
     font-family: unit-light;
     text-align: center;
@@ -901,7 +886,7 @@ ul ul a {
 }
 
 .text-details {
-    font-size: 0.9em;
+    font-size: 1.2em;
     color: white;
     font-family: unit-light;
 }
@@ -981,17 +966,28 @@ hr.wie2-content-text-divider {
     content: url("./assets/img/customers/milram-logo.png");
 }
 
+.map-container{
+    position: relative;
+}
+
+.contact-container {
+    top: 10px;
+    padding: 8px;
+    left: 46vw;
+    position: absolute;
+}
+
 .map-header-text {
     font-family: unit-black;
     color: white;
-    font-size: 0.8em;
+    font-size: 1em;
     display: block !important;
 }
 
 .map-address-text {
     font-family: unit-light;
     color: white;
-    font-size: 0.7em;
+    font-size: 0.9em;
     display: block !important;
 }
 
@@ -1074,12 +1070,6 @@ hr.wie2-content-text-divider {
     display: none;
     margin-left: auto;
     z-index: 100;
-}
-
-.contact-container {
-    top: 2vh;
-    left: 50vw;
-    position: absolute;
 }
 
 .angle-down-container {
@@ -1411,14 +1401,23 @@ hr.wie2-content-text-divider {
         z-index: 200;
         position: absolute;
     }
-}
+    .contact-container {
+        left: 30vw;
+    }
 
+    .map-header-text {
+        font-size: 0.8em;
+    }
+    .map-address-text{
+        font-size: 0.8em;
+    }
+}
 
 //wieso css styles
 #wieso1-text {
     color: white;
     font-family: unit-light-italic;
-   }
+}
 
 #wieso2-haushalt {
     height: 6vh;
@@ -1426,222 +1425,204 @@ hr.wie2-content-text-divider {
 
 #wieso2-sm-haushalt {
     height: 6vh;
-} 
-
-#wieso2-partner {
 }
 
-#promotion-row{
+#wieso2-partner {}
+
+#promotion-row {
     height: 6vh;
 }
 
-#promotion-sm-row{
+#promotion-sm-row {
     height: 6vh;
 }
 
-#verteilpartner-row{
+#verteilpartner-row {
     height: 6vh;
 }
 
-#verteilpartner-sm-row{
+#verteilpartner-sm-row {
     height: 6vh;
 }
 
-#partner2{
-    height: 12vh; 
+#partner2 {
+    height: 12vh;
 }
 
-#partner1{
+#partner1 {
     text-align: right;
 }
 
-#partner2-sm{
-    height: 12vh; 
+#partner2-sm {
+    height: 12vh;
 }
 
-#wieso2-verlag{
+#wieso2-verlag {
     height: 8vh;
 }
 
-#wieso2-sm-verlag{
+#wieso2-sm-verlag {
     height: 8vh;
 }
 
-#wieso2-numbers{
+#wieso2-numbers {
     height: 6vh;
 }
-#wieso2-data-wrapper{
+
+#wieso2-data-wrapper {
     opacity: 0.8;
 }
 
-#wieso2-umsatz-number{
+#wieso2-umsatz-number {
     height: 6vh;
 }
 
-#wieso2-umsatz-label{
+#wieso2-umsatz-label {
     height: 6vh;
 }
-#wieso2-partner-home-number{
-    height:12vh
+
+#wieso2-partner-home-number {
+    height: 12vh
 }
 
-#wieso2-partner-home-label{
-    height:8vh
+#wieso2-partner-home-label {
+    height: 8vh
 }
-.text-black-umsatz-label{
+
+.text-black-umsatz-label {
     font-family: unit-black;
-    color:rgb(50, 50, 50);
-    //font-size: 1vw;
+    color: rgb(50, 50, 50); //font-size: 1vw;
     text-align: right;
     padding-right: 2px;
-    padding-left:2px;
+    padding-left: 2px;
 }
 
-.text-black-umsatz-number{
+.text-black-umsatz-number {
     font-family: unit-ultra;
-    color:rgb(50, 50, 50);
-    //font-size: 5vw;
-    line-height: 4vh;
-    //margin-top: -0.3em;
+    color: rgb(50, 50, 50); //font-size: 5vw;
+    line-height: 4vh; //margin-top: -0.3em;
     padding-right: 2px;
-    padding-left:2px;
-    font-size:4vh;
+    padding-left: 2px;
+    font-size: 4vh;
 }
 
-
-.text-black-haushalt-label{
+.text-black-haushalt-label {
     font-family: unit-black;
-    color:rgb(100, 100, 100);
-    //font-size: 0.9vw;
+    color: rgb(100, 100, 100); //font-size: 0.9vw;
     //margin-left: 1em;
     padding-right: 2px;
-    padding-left:2px;
+    padding-left: 2px;
 }
 
-.text-black-haushalt-number{
+.text-black-haushalt-number {
     font-family: unit-ultra;
-    color:rgb(100, 100, 100);
-    //font-size: 3vw;
+    color: rgb(100, 100, 100); //font-size: 3vw;
     padding-right: 0px;
     padding-left: 0px;
     text-align: right;
     line-height: 4vh;
     padding-right: 2px;
-    padding-left:2px;
-    font-size:4vh;
-    //margin-top: -0.35em;
+    padding-left: 2px;
+    font-size: 4vh; //margin-top: -0.35em;
 }
 
-.text-black-partner-home-number{
+.text-black-partner-home-number {
     font-family: unit-ultra;
-    color:rgb(100, 100, 100);
-    //font-size: 10vw;
+    color: rgb(100, 100, 100); //font-size: 10vw;
     line-height: 6vh;
     padding-right: 2px;
-    padding-left:2px;
-    font-size:6vh;
-    //margin-top: -0.35em;
+    padding-left: 2px;
+    font-size: 6vh; //margin-top: -0.35em;
 }
 
-.text-black-partner-home-label{
+.text-black-partner-home-label {
     font-family: unit-black;
-    color:rgb(100, 100, 100);
-    //font-size: 0.9vw;
-    margin-left: -2vw;
-    //margin-left: 4em;
+    color: rgb(100, 100, 100); //font-size: 0.9vw;
+    margin-left: -2vw; //margin-left: 4em;
     //margin-top: 3em;
     padding-right: 2px;
-    padding-left:2px;
+    padding-left: 2px;
 }
 
-.text-black-verteilpartner-number{
+.text-black-verteilpartner-number {
     font-family: unit-ultra;
-    color:rgb(50, 50, 50);
-   //font-size: 6em;
+    color: rgb(50, 50, 50); //font-size: 6em;
     padding-right: 0px;
     padding-left: 0px;
-    line-height: 4vh;
-    //margin-top: -0.25em;
+    line-height: 4vh; //margin-top: -0.25em;
     padding-right: 2px;
-    padding-left:2px;
-    font-size:4vh;
+    padding-left: 2px;
+    font-size: 4vh;
     margin-left: -0.4vw;
 }
 
-.text-black-verteilpartner-label{
+.text-black-verteilpartner-label {
     font-family: unit-black;
-    color:rgb(50, 50, 50);
-    //font-size: 0.9em;
-    text-align: right;
-    //margin-left: -0.6em;
+    color: rgb(50, 50, 50); //font-size: 0.9em;
+    text-align: right; //margin-left: -0.6em;
     //margin-top: 2em;
     padding-right: 2px;
-    padding-left:2px;
+    padding-left: 2px;
 }
 
-.text-black-promotion-number{
+.text-black-promotion-number {
     font-family: unit-ultra;
-    color:rgb(100, 100, 100);
+    color: rgb(100, 100, 100);
     padding-right: 0px;
     padding-left: 0px;
     line-height: 4vh;
-    font-size:4vh;
+    font-size: 4vh;
     padding-right: 2px;
-    padding-left:2px;
+    padding-left: 2px;
     margin-left: -0.4vw;
 }
 
-.text-black-promotion-label{
+.text-black-promotion-label {
     font-family: unit-black;
-    color:rgb(100, 100, 100);
+    color: rgb(100, 100, 100);
     text-align: right;
     padding-right: 2px;
-    padding-left:2px;
+    padding-left: 2px;
 }
 
-.text-black-verlag-label{
+.text-black-verlag-label {
     font-family: unit-black;
-    color:rgb(40, 40, 40);
-    //font-size: 0.9vw;
-    text-align:right;
-    //margin-left: -0.4em;
+    color: rgb(40, 40, 40); //font-size: 0.9vw;
+    text-align: right; //margin-left: -0.4em;
     //margin-top: -0.8em;
     padding-right: 2px;
-    padding-left:2px;
+    padding-left: 2px;
 }
 
-
-
-.text-black-druck-label{
+.text-black-druck-label {
     font-family: unit-black;
-    color:rgb(100, 100, 100);
+    color: rgb(100, 100, 100);
     padding-right: 2px;
-    padding-left:2px;
+    padding-left: 2px;
     margin-left: -2vw;
 }
 
-.text-black-druck-number{
+.text-black-druck-number {
     font-family: unit-ultra;
-    color:rgb(100, 100, 100);
+    color: rgb(100, 100, 100);
     line-height: 4vh;
-    font-size:4vh;
+    font-size: 4vh;
     padding-right: 2px;
-    padding-left:2px;
+    padding-left: 2px;
 }
-.text-black-verlag-number{
+
+.text-black-verlag-number {
     font-family: unit-ultra;
-    color:rgb(40, 40, 40);
-    //font-size: 4.6vw;
-    line-height:  4vh;
+    color: rgb(40, 40, 40); //font-size: 4.6vw;
+    line-height: 4vh;
     padding-right: 2px;
-    padding-left:2px;
-    text-align:right;
-    font-size:4vh;
-    //margin-top: -0.7em;
+    padding-left: 2px;
+    text-align: right;
+    font-size: 4vh; //margin-top: -0.7em;
 }
 
 @media screen and (max-width: 572px) {
-/*     .text-black-promotion-number{
+    /*     .text-black-promotion-number{
 
         margin-left: -2vh;
     }
@@ -1652,176 +1633,167 @@ hr.wie2-content-text-divider {
 }
 
 @media screen and (max-width: 768px) {
-    .text-black-promotion-number{
-
+    .text-black-promotion-number {
         margin-left: -0.2vw;
     }
-    
-    .text-black-partner-home-label{
+    .text-black-partner-home-label {
         margin-left: -0.6vw;
     }
-
-    .text-black-verteilpartner-number{
+    .text-black-verteilpartner-number {
         margin-left: -0.2vw;
     }
-
-    .text-black-druck-label{
+    .text-black-druck-label {
         margin-left: -0.6vw;
     }
 }
 
 @media screen and (max-width: 1440px) {
-    .text-black-promotion-number{
-
+    .text-black-promotion-number {
         margin-left: -0.4vw;
     }
-    
-    .text-black-partner-home-label{
+    .text-black-partner-home-label {
         margin-left: -1vw;
     }
-
-    .text-black-verteilpartner-number{
+    .text-black-verteilpartner-number {
         margin-left: -0.4vw;
     }
-
-    .text-black-druck-label{
+    .text-black-druck-label {
         margin-left: -0.2vw;
     }
 }
 
 // WIE CSS STYLES
-
-
-.wie2-italic-header{
-    font-family: unit-light-italic;
-    //font-size: 0.9em;
+.wie2-italic-header {
+    font-family: unit-light-italic; //font-size: 0.9em;
     color: black;
     opacity: 1 !important;
 }
 
-.wie2-ultra-header{
-    font-family: unit-ultra;
-   // font-size: 1em;
+.wie2-ultra-header {
+    font-family: unit-ultra; // font-size: 1em;
     color: black;
     opacity: 1 !important;
 }
 
-.wie2-text{
-    //font-size: 0.9em;
+.wie2-text {
+    font-size: 1em;
     color: black;
     font-family: unit-light;
     opacity: 1 !important;
 }
 
-#wie2-carousel{
-    min-height: 40vh;
+#wie2-carousel {
+    min-height: 400px;
 }
 
-#wie2-carousel-bottom{
+#wie2-carousel-bottom {
     height: 10px;
     -moz-box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
     box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
 }
 
-#wie2-placeholder{
-    height:50%;
-}
-#wie2-carousel{
-    height:100px;
+#wie2-placeholder {
+    height: 50%;
 }
 
-.wie3-detail-text{
+#wie2-carousel {
+    height: 100px;
+}
+
+.wie3-detail-text {
     font-size: 0.9em;
     color: black;
     font-family: unit-light;
 }
 
-.wie3-light-italic-header{
+.wie3-light-italic-header {
     font-size: 0.9em;
     color: black;
     font-family: unit-light-italic;
     text-align: center;
 }
 
-.wie3-ultra-header{
+.wie3-ultra-header {
     font-size: 4em;
     color: red;
     font-family: unit-ultra;
     text-align: center;
 }
 
-.wie4-light-italic-header{
+.wie4-light-italic-header {
     font-size: 0.9em;
     color: black;
     font-family: unit-light-italic;
     text-align: center;
 }
-.wie4-detail-text{
+
+.wie4-detail-text {
     font-size: 0.9em;
     color: black;
     font-family: unit-light;
     text-align: center;
 }
-.wie4-black-header{
+
+.wie4-black-header {
     font-size: 1em;
     font-family: unit-black;
     color: black;
     text-align: center;
 }
 
-#wie4-text-box{
+#wie4-text-box {
     background: rgb(255, 255, 250);
     color: black;
-    -webkit-box-shadow: 54px 50px 8px 1px rgba(0,0,0,0.6);
--moz-box-shadow: 54px 50px 8px 1px rgba(0,0,0,0.6);
-box-shadow: 54px 50px 8px 1px rgba(0,0,0,0.6);
-padding: 3em;
+    -webkit-box-shadow: 54px 50px 8px 1px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 54px 50px 8px 1px rgba(0, 0, 0, 0.6);
+    box-shadow: 54px 50px 8px 1px rgba(0, 0, 0, 0.6);
+    padding: 3em;
 }
 
-#wie2-header{
- height: 4vh;
- width:100%;
- margin-left: 7px;
+#wie2-header {
+    height: 4vh;
+    width: 100%;
+    margin-left: 7px;
 }
 
-#wie2-subheader{
+#wie2-subheader {
     height: 5vh;
-    width:100%;
+    width: 100%;
     margin-left: 7px;
 }
 
-#wie2-details{
+#wie2-details {
     height: 14vh;
-    width:100%;
+    width: 100%;
     margin-left: 7px;
-
 }
 
-#wie3-red-header-wrapper{
-    height:30vh;
+#wie3-red-header-wrapper {
+    height: 30vh;
 }
 
 @media screen and (max-width: 768px) {
-    .wie3-ultra-header{
+    .wie3-ultra-header {
         font-size: 3em;
+    }
+
+    agm-map{
+        height: 300px;
     }
 }
 
-
 //WAS CSS STYLES
-
 ul.was1-list {
     padding: 1em;
     list-style-type: none;
     color: white;
-    
 }
 
 ul.was1-list li {
-   margin: 0 0.6em 0 0.6em;
-   opacity: 0.7;
- filter: alpha(opacity=70);
+    margin: 0 0.6em 0 0.6em;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
 }
 
 ul.was1-list li:hover {
@@ -1832,170 +1804,170 @@ ul.was1-list li:hover {
     text-decoration: underline;
 }
 
-hr.was1-list-divider-bottom{
+hr.was1-list-divider-bottom {
     margin-top: -1.2em;
-        border: 0; 
-        height: 1px; 
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
 }
-hr.was1-list-divider-top{
+
+hr.was1-list-divider-top {
     margin-bottom: -0.2em;
-        border: 0; 
-        height: 1px; 
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
 }
 
-#was2-text-wrapper{
-    -moz-box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
-    -webkit-box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
-    box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
+#was2-text-wrapper {
+    -moz-box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
 }
 
-.was-text-light-black{
+.was-text-light-black {
     font-size: 0.9em;
     font-family: unit-light;
-    color:black;
+    color: black;
 }
 
-.was-text-light-white{
+.was-text-light-white {
     font-size: 0.9em;
     font-family: unit-light;
-    color:white;
+    color: white;
 }
 
-.was-header-black{
+.was-header-black {
     font-size: 1em;
     font-family: unit-black;
-    color:black;
+    color: black;
 }
 
-.was-header-white{
+.was-header-white {
     font-size: 1em;
     font-family: unit-black;
-    color:white;
+    color: white;
 }
 
-.was-header-light-italic-black{
+.was-header-light-italic-black {
     font-size: 1em;
     font-family: unit-light-italic;
-    color:black;
+    color: black;
 }
 
-.was-header-light-italic-white{
+.was-header-light-italic-white {
     font-size: 1em;
     font-family: unit-light-italic;
-    color:white;
+    color: white;
 }
 
-.skill-header-italic-white{
+.skill-header-italic-white {
     font-size: 1em;
     font-family: unit-light-italic;
-    color:white;
+    color: white;
     padding-top: 1em;
 }
 
-.skill-header-italic-black{
+.skill-header-italic-black {
     font-size: 1em;
     font-family: unit-light-italic;
-    color:black;
+    color: black;
     padding-top: 1em;
 }
 
-.was-skills-wrapper{
-    -moz-box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
-    -webkit-box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
-    box-shadow: inset 0px -11px 8px -10px rgba(0,0,0,0.5);
+.was-skills-wrapper {
+    -moz-box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5);
 }
 
-.skill-list td{
+.skill-list td {
     padding: 0.5em;
     color: black;
 }
 
-.was2-skill-list{
+.was2-skill-list {
     color: black;
     font-size: 1.2em;
     font-family: unit-black;
 }
 
-.was-skill-list-black{
+.was-skill-list-black {
     color: black;
     font-size: 1.2em;
     font-family: unit-black;
 }
-.was-skill-list-white{
+
+.was-skill-list-white {
     color: white;
     font-size: 1.2em;
     font-family: unit-black;
 }
 
-.skill-list-icon{
+.skill-list-icon {
     padding-right: 1.6em;
 }
 
 @media screen and (max-width: 540px) {
-    .was2-skill-list{
+    .was2-skill-list {
         font-size: 1em;
     }
-
-    .was-skill-list-black{
+    .was-skill-list-black {
         font-size: 1em;
     }
-    .was-skill-list-white{
+    .was-skill-list-white {
         font-size: 1em;
     }
 }
 
-
 //WER CSS STYLES
-
-.jobs-details-text{
-    font-size:0.9em;
+.jobs-details-text {
+    font-size: 0.9em;
     font-family: unit-light;
     color: black;
     padding: 0 8em 0 8em;
 }
 
-.jobs-header-text{
-    font-size:1em;
+.jobs-header-text {
+    font-size: 1em;
     font-family: unit-black;
     color: black;
     text-align: center;
 }
 
-.jobs-job-text{
-    font-size:3.2em;
+.jobs-job-text {
+    font-size: 3.2em;
     font-family: unit-ultra;
     color: red;
     text-align: center;
 }
 
-.jobs-search-text{
-    font-size:1em;
+.jobs-search-text {
+    font-size: 1em;
     font-family: unit-light-italic;
     color: black;
     text-align: center;
 }
 
-hr.job-divider-top{
+hr.job-divider-top {
     margin-top: 0.7em;
-        border: 0; 
-        height: 2px; 
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-hr.job-divider-bottom{
+hr.job-divider-bottom {
     margin-top: 0.1em;
-        border: 0; 
-        height: 2px; 
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-#wer1-details{
+#wer1-details {
     margin-top: 2em;
 }
+
 @media only screen and (max-height: 768px) {
-    .jobs-details-text{
+    .jobs-details-text {
         padding: 0 0 0 0;
     }
 }
